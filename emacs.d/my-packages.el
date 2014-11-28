@@ -13,7 +13,11 @@
                             projectile
                             helm-projectile
                             ruby-end
-                            evil))
+                            evil-leader
+                            evil
+                            evil-surround
+                            evil-matchit
+                            evil-visualstar))
 
 (defun packages-installed-p ()
   (loop for p in required-packages

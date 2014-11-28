@@ -24,6 +24,7 @@
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 8)
 (setq require-final-newline t)
+(setq js-indent-level 2)
 
 ;; reload files that were changed externally
 (global-auto-revert-mode t)

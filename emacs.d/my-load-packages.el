@@ -10,8 +10,6 @@
 (setq helm-split-window-in-side-p t
       helm-buffers-fuzzy-matching t
       helm-ff-file-name-history-use-recentf t)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-mini)
 (helm-mode 1)
 
 (require 'flx-ido)
@@ -28,9 +26,20 @@
 (require 'helm-projectile)
 (helm-projectile-on)
 
-(require 'evil)
-(evil-mode 1)
-
 (require 'ruby-end)
 (setq ruby-end-insert-newline nil)
 (ruby-end-mode 1)
+
+(require 'evil-leader)
+(global-evil-leader-mode)
+
+(require 'evil)
+(evil-mode 1)
+
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
+(require 'evil-matchit)
+(global-evil-matchit-mode 1)
+
+(require 'evil-visualstar)
