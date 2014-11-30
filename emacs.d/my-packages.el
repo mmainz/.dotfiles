@@ -10,6 +10,7 @@
                             magit
                             flx-ido
                             helm
+                            company
                             projectile
                             helm-projectile
                             smartparens

@@ -6,18 +6,22 @@
 
 (require 'magit)
 
-(require 'helm-config)
-(setq helm-split-window-in-side-p t
-      helm-buffers-fuzzy-matching t
-      helm-ff-file-name-history-use-recentf t)
-(helm-mode 1)
-
 (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
+
+(require 'helm-config)
+(setq helm-split-window-in-side-p t
+      helm-buffers-fuzzy-matching t
+      helm-ff-file-name-history-use-recentf t)
+(helm-mode 1)
+
+(require 'company)
+(global-company-mode)
+(setq company-idle-delay 0)
 
 (require 'projectile)
 (setq projectile-require-project-root nil)
@@ -28,6 +32,7 @@
 
 (require 'smartparens-config)
 (smartparens-global-mode)
+(show-smartparens-global-mode)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
