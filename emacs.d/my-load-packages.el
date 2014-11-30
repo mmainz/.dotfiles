@@ -26,9 +26,8 @@
 (require 'helm-projectile)
 (helm-projectile-on)
 
-(require 'ruby-end)
-(setq ruby-end-insert-newline nil)
-(ruby-end-mode 1)
+(require 'smartparens-config)
+(smartparens-global-mode)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -43,3 +42,13 @@
 (global-evil-matchit-mode 1)
 
 (require 'evil-visualstar)
+
+(require 'clojure-mode)
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-enable-auto-quoting nil)

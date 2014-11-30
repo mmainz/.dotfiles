@@ -12,12 +12,14 @@
                             helm
                             projectile
                             helm-projectile
-                            ruby-end
+                            smartparens
                             evil-leader
                             evil
                             evil-surround
                             evil-matchit
-                            evil-visualstar))
+                            evil-visualstar
+                            clojure-mode
+                            web-mode))
 
 (defun packages-installed-p ()
   (loop for p in required-packages

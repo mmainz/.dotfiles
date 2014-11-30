@@ -38,9 +38,6 @@
   (setq mac-option-modifier nil)
   (global-set-key [kp-delete] 'delete-char))
 
-;; auto-pair parenthesis etc.
-(electric-pair-mode 1)
-
 ;; don't insert encoding comment in first line
 (setq ruby-insert-encoding-magic-comment nil)
 
