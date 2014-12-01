@@ -44,5 +44,8 @@
 ;; remove trailing whitespace before saving a file
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
+;; auto-pair parenthesis
+(electric-pair-mode)
+
 ;; start server for remote calling with emacsclient
 (server-start)

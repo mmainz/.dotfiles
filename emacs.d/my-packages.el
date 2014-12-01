@@ -14,6 +14,7 @@
                             projectile
                             helm-projectile
                             smartparens
+                            ruby-end
                             evil-leader
                             evil
                             evil-surround
@@ -24,7 +25,8 @@
                             coffee-mode
                             slim-mode
                             yaml-mode
-                            markdown-mode))
+                            markdown-mode
+                            cider))
 
 (defun packages-installed-p ()
   (loop for p in required-packages

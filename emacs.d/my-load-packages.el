@@ -31,8 +31,10 @@
 (helm-projectile-on)
 
 (require 'smartparens-config)
-(smartparens-global-mode)
 (show-smartparens-global-mode)
+
+(require 'ruby-end)
+(setq ruby-end-insert-newline nil)
 
 (require 'evil-leader)
 (global-evil-leader-mode)
@@ -70,3 +72,6 @@
 (require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+(require 'cider)
+(setq cider-show-error-buffer nil)
