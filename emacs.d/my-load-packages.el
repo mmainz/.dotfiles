@@ -57,3 +57,16 @@
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
 (setq web-mode-enable-auto-quoting nil)
+
+(require 'coffee-mode)
+(custom-set-variables '(coffee-tab-width 2))
+
+(require 'slim-mode)
+(add-to-list 'auto-mode-alist '("\\.emblem\\'" . slim-mode))
+
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+(require 'markdown-mode)
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))

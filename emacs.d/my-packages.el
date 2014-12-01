@@ -20,7 +20,11 @@
                             evil-matchit
                             evil-visualstar
                             clojure-mode
-                            web-mode))
+                            web-mode
+                            coffee-mode
+                            slim-mode
+                            yaml-mode
+                            markdown-mode))
 
 (defun packages-installed-p ()
   (loop for p in required-packages
