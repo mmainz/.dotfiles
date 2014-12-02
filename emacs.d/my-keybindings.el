@@ -5,7 +5,9 @@
   "o" 'other-window
   "3" 'split-window-right
   "1" 'delete-other-windows
-  "i" 'indent-region-or-buffer)
+  "i" 'indent-region-or-buffer
+  "b" 'helm-mini
+  "d" 'ido-dired)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)

@@ -73,5 +73,13 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+(require 'fill-column-indicator)
+(add-hook 'after-change-major-mode-hook 'fci-mode)
+(setq fci-rule-column 80)
+(setq fci-rule-color "brown")
+
 (require 'cider)
 (setq cider-show-error-buffer nil)
+
+(require 'flycheck)
+(global-flycheck-mode)

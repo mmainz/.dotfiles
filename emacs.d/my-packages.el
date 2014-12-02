@@ -26,7 +26,9 @@
                             slim-mode
                             yaml-mode
                             markdown-mode
-                            cider))
+                            fill-column-indicator
+                            cider
+                            flycheck))
 
 (defun packages-installed-p ()
   (loop for p in required-packages

@@ -1,13 +1,30 @@
 ;; don't show welcome screen
 (setq inhibit-startup-message t)
 
+;; Setting rbenv path
+(setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
+                       (getenv "HOME") "/.rbenv/bin:"
+                       (getenv "PATH")))
+(setq exec-path (cons (concat (getenv "HOME") "/.rbenv/shims")
+                      (cons (concat (getenv "HOME") "/.rbenv/bin") exec-path)))
+
 ;; remove scrollbars, menu bars and toolbars
 (when (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (when (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (when (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
+;; treat underscore as a word character to get more vim-like movement behavior
+(modify-syntax-entry ?_ "w")
+(add-hook 'ruby-mode-hook #'(lambda () (modify-syntax-entry ?_ "w")))
+
 ;; remove the blinking cursor
 (blink-cursor-mode -1)
+
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-follow-mouse 't)
+(setq scroll-step 1)
 
 ;; put backup files into ~/.emacs-backup
 (setq backup-directory-alist
