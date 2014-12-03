@@ -7,7 +7,8 @@
   "1" 'delete-other-windows
   "i" 'indent-region-or-buffer
   "b" 'helm-mini
-  "d" 'ido-dired)
+  "d" 'ido-dired
+  "c" 'comment-or-uncomment-region)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
