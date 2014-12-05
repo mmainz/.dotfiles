@@ -1,0 +1,10 @@
+[user]
+	name = Mario Mainz
+	email = mainz.mario@googlemail.com
+[color]
+	ui = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[push]
+	default = simple
