@@ -26,6 +26,7 @@
                             slim-mode
                             yaml-mode
                             markdown-mode
+                            scss-mode
                             fill-column-indicator
                             cider
                             flycheck))

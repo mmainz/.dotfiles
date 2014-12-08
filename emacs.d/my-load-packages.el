@@ -73,6 +73,10 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+(require 'scss-mode)
+(add-to-list 'auto-mode-alist '("\\.sass\\'" . scss-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
+
 (require 'fill-column-indicator)
 (add-hook 'after-change-major-mode-hook 'fci-mode)
 (setq fci-rule-column 80)
