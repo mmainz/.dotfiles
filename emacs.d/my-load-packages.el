@@ -36,6 +36,8 @@
 (require 'ruby-end)
 (setq ruby-end-insert-newline nil)
 
+(require 'iedit)
+
 (require 'evil-leader)
 (global-evil-leader-mode)
 

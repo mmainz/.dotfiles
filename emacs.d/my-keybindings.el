@@ -8,7 +8,10 @@
   "i" 'indent-region-or-buffer
   "b" 'helm-mini
   "d" 'ido-dired
-  "c" 'comment-or-uncomment-region)
+  "c" 'comment-or-uncomment-region
+  "e" 'iedit-mode
+  "m" 'iedit-restrict-function
+  "l" 'iedit-restrict-current-line)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)

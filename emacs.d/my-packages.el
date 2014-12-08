@@ -15,6 +15,7 @@
                             helm-projectile
                             smartparens
                             ruby-end
+                            iedit
                             evil-leader
                             evil
                             evil-surround
