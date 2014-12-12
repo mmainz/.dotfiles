@@ -78,11 +78,15 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (require 'fill-column-indicator)
-(add-hook 'after-change-major-mode-hook 'fci-mode)
-(add-hook 'web-mode-hook (lambda ()
-                           (turn-off-fci-mode)))
 (setq fci-rule-column 80)
 (setq fci-rule-color "brown")
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(define-global-minor-mode my-global-fci-mode global-fci-mode
+  (lambda ()
+    (when (not (memq major-mode
+                     (list 'web-mode)))
+      (global-fci-mode 1))))
+(my-global-fci-mode 1)
 
 (require 'cider)
 (setq cider-show-error-buffer nil)
