@@ -87,5 +87,7 @@
 (require 'cider)
 (setq cider-show-error-buffer nil)
 
+(require 'inf-ruby)
+
 (require 'flycheck)
 (global-flycheck-mode)

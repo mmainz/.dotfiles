@@ -29,6 +29,7 @@
                             markdown-mode
                             fill-column-indicator
                             cider
+                            inf-ruby
                             flycheck))
 
 (defun packages-installed-p ()
