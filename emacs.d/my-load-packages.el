@@ -95,3 +95,5 @@
 
 (require 'flycheck)
 (global-flycheck-mode)
+
+(require 'restclient)

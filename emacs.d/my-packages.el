@@ -30,7 +30,8 @@
                             fill-column-indicator
                             cider
                             inf-ruby
-                            flycheck))
+                            flycheck
+                            restclient))
 
 (defun packages-installed-p ()
   (loop for p in required-packages
