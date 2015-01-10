@@ -43,6 +43,9 @@
 
 (require 'evil)
 (evil-mode 1)
+(add-hook 'after-change-major-mode-hook
+          (function (lambda ()
+                      (setq evil-shift-width 2))))
 
 (require 'evil-surround)
 (global-evil-surround-mode 1)
