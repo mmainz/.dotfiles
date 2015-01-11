@@ -31,7 +31,8 @@
                             cider
                             inf-ruby
                             flycheck
-                            restclient))
+                            restclient
+                            exec-path-from-shell))
 
 (defun packages-installed-p ()
   (loop for p in required-packages
