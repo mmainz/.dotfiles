@@ -2,6 +2,7 @@
 
 (require 'darcula-theme)
 (set-frame-font "Inconsolata-12")
+(add-to-list 'default-frame-alist '(font . "Inconsolata-12"))
 (set-face-attribute 'mode-line-buffer-id nil :background "black")
 
 (require 'magit)

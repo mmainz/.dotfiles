@@ -3,7 +3,9 @@
 (evil-leader/set-key
   "f" 'helm-projectile-find-file
   "o" 'other-window
+  "2" 'split-window-below
   "3" 'split-window-right
+  "5" 'make-frame-command
   "1" 'delete-other-windows
   "i" 'indent-region-or-buffer
   "b" 'helm-mini
