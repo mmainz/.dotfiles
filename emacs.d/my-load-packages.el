@@ -80,6 +80,8 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+(require 'haml-mode)
+
 (require 'fill-column-indicator)
 (setq fci-rule-column 80)
 (setq fci-rule-color "brown")

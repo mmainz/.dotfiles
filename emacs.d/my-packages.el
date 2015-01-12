@@ -27,6 +27,7 @@
                             slim-mode
                             yaml-mode
                             markdown-mode
+                            haml-mode
                             fill-column-indicator
                             cider
                             inf-ruby
