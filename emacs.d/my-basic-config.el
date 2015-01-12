@@ -66,5 +66,8 @@
 ;; auto-pair parenthesis
 (electric-pair-mode)
 
+;; set garbage collection threshold
+(setq gc-cons-threshold 1000000000)
+
 ;; start server for remote calling with emacsclient
 (server-start)
