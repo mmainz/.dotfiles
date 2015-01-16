@@ -3,6 +3,7 @@ set -x GIT_EDITOR 'vi'
 
 alias tpr="touch ~/.pow/restart.txt"
 alias ec="emacsclient -n"
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
