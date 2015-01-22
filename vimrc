@@ -31,6 +31,7 @@
  NeoBundle 'bling/vim-airline'
  NeoBundle 'tpope/vim-rails'
  NeoBundle 'flazz/vim-colorschemes'
+ NeoBundle 'ntpeters/vim-better-whitespace'
 
  call neobundle#end()
 
@@ -38,6 +39,13 @@
  filetype plugin indent on
 
  colorscheme monokai
+ syntax on
+ let g:ctrlp_cmd = "CtrlPMixed"
+
+ let mapleader = "m"
+ map <Leader>s :vsplit<CR>
+
+ autocmd VimEnter * ToggleStripWhitespaceOnSave
 
  " If there are uninstalled bundles found on startup,
  " this will conveniently prompt you to install them.
