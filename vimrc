@@ -38,6 +38,10 @@
  " Required:
  filetype plugin indent on
 
+ set smartindent
+ set tabstop=2
+ set shiftwidth=2
+ set expandtab
  colorscheme monokai
  syntax on
  let g:ctrlp_cmd = "CtrlPMixed"
