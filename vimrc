@@ -1,58 +1,73 @@
 " Note: Skip initialization for vim-tiny or vim-small.
- if !1 | finish | endif
+if !1 | finish | endif
 
- if has('vim_starting')
-   if &compatible
-     set nocompatible               " Be iMproved
-   endif
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-   " Required:
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
- " Required:
- call neobundle#begin(expand('~/.vim/bundle/'))
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
 
- " Let NeoBundle manage NeoBundle
- " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
 
- " My Bundles here:
- " Refer to |:NeoBundle-examples|.
- " Note: You don't set neobundle setting in .gvimrc!
- NeoBundle 'wincent/command-t'
- NeoBundle 'tpope/vim-fugitive'
- NeoBundle 'scrooloose/nerdtree'
- NeoBundle 'tpope/vim-surround'
- NeoBundle 'scrooloose/syntastic'
- NeoBundle 'kien/ctrlp.vim'
- NeoBundle 'kchmck/vim-coffee-script'
- NeoBundle 'scrooloose/nerdcommenter'
- NeoBundle 'bling/vim-airline'
- NeoBundle 'tpope/vim-rails'
- NeoBundle 'flazz/vim-colorschemes'
- NeoBundle 'ntpeters/vim-better-whitespace'
+" My Bundles here:
+" Refer to |:NeoBundle-examples|.
+" Note: You don't set neobundle setting in .gvimrc!
+NeoBundle 'wincent/command-t'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'tpope/vim-rbenv'
 
- call neobundle#end()
+call neobundle#end()
 
- " Required:
- filetype plugin indent on
+" Required:
+filetype plugin indent on
 
- set smartindent
- set tabstop=2
- set shiftwidth=2
- set expandtab
- set nowrap
- set noswapfile
- colorscheme monokai
- syntax on
- let g:ctrlp_cmd = "CtrlPMixed"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
- let mapleader = "m"
- map <Leader>s :vsplit<CR>
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
- autocmd VimEnter * ToggleStripWhitespaceOnSave
+set smartindent
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set nowrap
+set noswapfile
+colorscheme monokai
+syntax on
+let g:ctrlp_cmd = "CtrlPMixed"
 
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck
+let mapleader = "m"
+map <Leader>s :vsplit<CR>
+map <Leader>h :wincmd h<CR>
+map <Leader>j :wincmd j<CR>
+map <Leader>k :wincmd k<CR>
+map <Leader>l :wincmd l<CR>
+
+autocmd VimEnter * ToggleStripWhitespaceOnSave
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
