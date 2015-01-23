@@ -42,6 +42,7 @@
  set tabstop=2
  set shiftwidth=2
  set expandtab
+ set nowrap
  colorscheme monokai
  syntax on
  let g:ctrlp_cmd = "CtrlPMixed"
