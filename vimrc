@@ -55,7 +55,9 @@ set shiftwidth=2
 set expandtab
 set nowrap
 set noswapfile
-colorscheme monokai
+let macvim_skip_colorscheme=1
+set bg=dark
+colorscheme badwolf
 syntax on
 let g:ctrlp_cmd = "CtrlPMixed"
 
