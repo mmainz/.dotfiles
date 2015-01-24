@@ -29,10 +29,12 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'ntpeters/vim-better-whitespace'
+NeoBundle 'vim-scripts/AutoComplPop'
 NeoBundle 'tpope/vim-rbenv'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'mtscout6/vim-cjsx'
 
 call neobundle#end()
 
@@ -74,6 +76,6 @@ map <Leader>h :wincmd h<CR>
 map <Leader>j :wincmd j<CR>
 map <Leader>k :wincmd k<CR>
 map <Leader>l :wincmd l<CR>
+map <Leader>o :wincmd o<CR>
 
 autocmd VimEnter * ToggleStripWhitespaceOnSave
-
