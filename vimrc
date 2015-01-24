@@ -68,7 +68,9 @@ let macvim_skip_colorscheme=1
 colorscheme solarized
 set bg=dark
 syntax on
+
 let g:ctrlp_cmd = "CtrlPMixed"
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 let mapleader = "m"
 map <Leader>s :vsplit<CR>
