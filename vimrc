@@ -20,24 +20,31 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
-NeoBundle 'wincent/command-t'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'tpope/vim-rails'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'ntpeters/vim-better-whitespace'
 NeoBundle 'tpope/vim-rbenv'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
 
 call neobundle#end()
 
 " Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+
+set term=xterm
+set t_Co=256
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -56,8 +63,8 @@ set expandtab
 set nowrap
 set noswapfile
 let macvim_skip_colorscheme=1
+colorscheme solarized
 set bg=dark
-colorscheme badwolf
 syntax on
 let g:ctrlp_cmd = "CtrlPMixed"
 
@@ -70,6 +77,3 @@ map <Leader>l :wincmd l<CR>
 
 autocmd VimEnter * ToggleStripWhitespaceOnSave
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
