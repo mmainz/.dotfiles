@@ -35,6 +35,7 @@ NeoBundle 'tpope/vim-rbenv'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mtscout6/vim-cjsx'
 
@@ -63,6 +64,7 @@ let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 set smartindent
 set tabstop=2
 set shiftwidth=2
+set cc=80
 set expandtab
 set nowrap
 set noswapfile
@@ -73,6 +75,8 @@ syntax on
 
 let g:ctrlp_cmd = "CtrlPMixed"
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+let g:jsx_ext_required = 0
 
 let mapleader = "m"
 map <Leader>s :vsplit<CR>
