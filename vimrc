@@ -68,6 +68,7 @@ set cc=80
 set expandtab
 set nowrap
 set noswapfile
+set backspace=2
 let macvim_skip_colorscheme=1
 colorscheme solarized
 set bg=dark
