@@ -1,19 +1,24 @@
 ;; evil-leader
 (evil-leader/set-leader "m")
 (evil-leader/set-key
+  "x" 'helm-M-x
   "f" 'helm-projectile-find-file
-  "o" 'other-window
+  "0" 'delete-window
+  "1" 'delete-other-windows
   "2" 'split-window-below
   "3" 'split-window-right
   "5" 'make-frame-command
-  "1" 'delete-other-windows
   "i" 'indent-region-or-buffer
   "b" 'helm-mini
   "d" 'ido-dired
   "c" 'comment-or-uncomment-region
+  "h" 'windmove-right
+  "j" 'windmove-down
+  "k" 'windmove-up
+  "l" 'windmove-left
   "e" 'iedit-mode
   "m" 'iedit-restrict-function
-  "l" 'iedit-restrict-current-line)
+  "n" 'iedit-restrict-current-line)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
