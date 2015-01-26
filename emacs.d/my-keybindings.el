@@ -12,10 +12,10 @@
   "b" 'helm-mini
   "d" 'ido-dired
   "c" 'comment-or-uncomment-region
-  "h" 'windmove-right
+  "h" 'windmove-left
   "j" 'windmove-down
   "k" 'windmove-up
-  "l" 'windmove-left
+  "l" 'windmove-right
   "e" 'iedit-mode
   "m" 'iedit-restrict-function
   "n" 'iedit-restrict-current-line)
