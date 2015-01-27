@@ -70,7 +70,7 @@
 (electric-pair-mode)
 
 ;; set garbage collection threshold
-(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 10000000)
 
 ;; start server for remote calling with emacsclient
 (server-start)
