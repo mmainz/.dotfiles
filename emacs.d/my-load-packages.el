@@ -1,9 +1,7 @@
-(load-theme 'zenburn t)
-
-(require 'darcula-theme)
+(setq frame-background-mode 'dark)
+(load-theme 'solarized t)
 (set-frame-font "Inconsolata-14")
 (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))
-(set-face-attribute 'mode-line-buffer-id nil :background "black")
 
 (require 'magit)
 

@@ -5,8 +5,7 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(defvar required-packages '(zenburn-theme
-                            darcula-theme
+(defvar required-packages '(color-theme-solarized
                             magit
                             flx-ido
                             helm
