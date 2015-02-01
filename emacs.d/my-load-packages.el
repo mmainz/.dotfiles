@@ -2,6 +2,7 @@
 (load-theme 'solarized t)
 (set-frame-font "Inconsolata-14")
 (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))
+(enable-theme 'solarized)
 
 (require 'magit)
 
