@@ -9,6 +9,8 @@ set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
 rbenv rehash >/dev/null ^&1
 
+source ~/.config/fish/nvm-wrapper/nvm.fish
+
 set -x PATH ./bin $PATH
 set -x PATH $HOME/bin $PATH
 
