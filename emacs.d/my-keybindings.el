@@ -18,7 +18,8 @@
   "l" 'windmove-right
   "e" 'iedit-mode
   "m" 'iedit-restrict-function
-  "n" 'iedit-restrict-current-line)
+  "n" 'iedit-restrict-current-line
+  "<SPC>" 'ace-jump-char-mode)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)

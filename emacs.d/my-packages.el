@@ -20,6 +20,7 @@
                             evil-surround
                             evil-matchit
                             evil-visualstar
+                            ace-jump-mode
                             clojure-mode
                             web-mode
                             coffee-mode

@@ -4,60 +4,52 @@
 (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))
 (enable-theme 'solarized)
 
-(require 'magit)
-
-(require 'flx-ido)
+;; (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
 
-(require 'helm-config)
+;; (require 'helm-config)
 (setq helm-split-window-in-side-p t
       helm-buffers-fuzzy-matching t
       helm-ff-file-name-history-use-recentf t)
 (helm-mode 1)
 
-(require 'company)
+;; (require 'company)
 (global-company-mode)
 (setq company-idle-delay 0)
 
-(require 'projectile)
+;; (require 'projectile)
 (setq projectile-require-project-root nil)
 (projectile-global-mode)
 
-(require 'helm-projectile)
+;; (require 'helm-projectile)
 (helm-projectile-on)
 
-(require 'smartparens-config)
+;; (require 'smartparens-config)
 (show-smartparens-global-mode)
 
-(require 'ruby-end)
+;; (require 'ruby-end)
 (setq ruby-end-insert-newline nil)
 
-(require 'iedit)
-
-(require 'evil-leader)
+;; (require 'evil-leader)
 (global-evil-leader-mode)
 
-(require 'evil)
+;; (require 'evil)
 (evil-mode 1)
 (add-hook 'after-change-major-mode-hook
           (function (lambda ()
                       (setq evil-shift-width 2))))
 
-(require 'evil-surround)
+;; (require 'evil-surround)
 (global-evil-surround-mode 1)
 
-(require 'evil-matchit)
+;; (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
-(require 'evil-visualstar)
-
-(require 'clojure-mode)
-
-(require 'web-mode)
+;; (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.sass\\'" . web-mode))
@@ -73,22 +65,20 @@
         ad-do-it)
     ad-do-it))
 
-(require 'coffee-mode)
+;; (require 'coffee-mode)
 (custom-set-variables '(coffee-tab-width 2))
 
-(require 'slim-mode)
+;; (require 'slim-mode)
 (add-to-list 'auto-mode-alist '("\\.emblem\\'" . slim-mode))
 
-(require 'yaml-mode)
+;; (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
-(require 'markdown-mode)
+;; (require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-(require 'haml-mode)
-
-(require 'fill-column-indicator)
+;; (require 'fill-column-indicator)
 (setq fci-rule-column 80)
 (setq fci-rule-color "brown")
 (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
@@ -99,16 +89,12 @@
       (global-fci-mode 1))))
 (my-global-fci-mode 1)
 
-(require 'cider)
+;; (require 'cider)
 (setq cider-show-error-buffer nil)
 
-(require 'inf-ruby)
-
-(require 'flycheck)
+;; (require 'flycheck)
 (global-flycheck-mode)
 
-(require 'restclient)
-
-(require 'exec-path-from-shell)
+;; (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
