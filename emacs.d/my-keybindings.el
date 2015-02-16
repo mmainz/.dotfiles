@@ -1,3 +1,5 @@
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
+
 ;; evil-leader
 (evil-leader/set-leader "m")
 (evil-leader/set-key

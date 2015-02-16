@@ -1,9 +1,6 @@
 ;; don't show welcome screen
 (setq inhibit-startup-message t)
 
-;; maximize window on start
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
-
 ;; Setting rbenv path
 (setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
                        (getenv "HOME") "/.rbenv/bin:"
