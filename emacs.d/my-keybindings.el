@@ -21,6 +21,8 @@
   "e" 'iedit-mode
   "m" 'iedit-restrict-function
   "n" 'iedit-restrict-current-line
+  "-" 'previous-buffer
+  "." 'find-tag
   "<SPC>" 'ace-jump-char-mode)
 
 ;; helm
