@@ -23,7 +23,6 @@
 
 ;; (require 'projectile)
 (setq projectile-require-project-root nil)
-(setq projectile-enable-idle-timer t)
 (projectile-global-mode)
 
 ;; (require 'helm-projectile)
