@@ -45,6 +45,12 @@
 (setq css-indent-offset 4)
 (setq sass-indent-offset 4)
 
+;; 80 character limit highlight
+(require 'whitespace)
+(setq whitespace-line-column 80)
+(setq whitespace-style '(face lines-tail))
+(add-hook 'prog-mode-hook 'whitespace-mode)
+
 ;; reload files that were changed externally
 (global-auto-revert-mode t)
 
