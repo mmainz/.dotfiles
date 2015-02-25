@@ -51,6 +51,10 @@
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
+;; don't wrap long lines
+(set-default 'truncate-lines t)
+(setq truncate-partial-width-windows nil)
+
 ;; reload files that were changed externally
 (global-auto-revert-mode t)
 
