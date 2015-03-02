@@ -29,6 +29,7 @@
                             markdown-mode
                             haml-mode
                             go-mode
+                            undo-tree
                             cider
                             inf-ruby
                             flycheck

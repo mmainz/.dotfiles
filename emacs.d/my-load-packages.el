@@ -78,6 +78,9 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
+;; (require 'undo-tree)
+(global-undo-tree-mode)
+
 ;; (require 'cider)
 (setq cider-show-error-buffer nil)
 
