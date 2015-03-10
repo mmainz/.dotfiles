@@ -16,6 +16,8 @@
       helm-buffers-fuzzy-matching t
       helm-ff-file-name-history-use-recentf t)
 (helm-mode 1)
+(set-face-background 'helm-selection "#661100")
+(set-face-foreground 'helm-selection "#bbbbbb")
 
 ;; (require 'company)
 (global-company-mode)
