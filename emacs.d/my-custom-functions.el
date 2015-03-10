@@ -14,3 +14,19 @@
       (progn
         (indent-buffer)
         (message "Indented buffer.")))))
+
+(defun switch-theme-background-color-light ()
+  "Toggle between light and dark background color modes."
+  (interactive)
+  (set-frame-parameter nil 'background-mode 'light)
+  (enable-theme 'solarized)
+  (set-frame-parameter nil 'background-mode 'light)
+  (enable-theme 'solarized))
+
+(defun switch-theme-background-color-dark ()
+  "Toggle between light and dark background color modes."
+  (interactive)
+  (set-frame-parameter nil 'background-mode 'dark)
+  (enable-theme 'solarized)
+  (set-frame-parameter nil 'background-mode 'dark)
+  (enable-theme 'solarized))
