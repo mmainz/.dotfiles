@@ -1,4 +1,9 @@
-(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-mode)
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+
+;; hydra
+(defhydra hydra-theme ()
+  ("d" switch-theme-background-color-dark)
+  ("l" switch-theme-background-color-light))
 
 ;; evil-leader
 (evil-leader/set-leader "m")
@@ -23,7 +28,7 @@
   "n" 'iedit-restrict-current-line
   "-" 'previous-buffer
   "." 'find-tag
-  "<SPC>" 'ace-jump-char-mode)
+  "t" 'hydra-theme/body)
 
 (evil-leader/set-key-for-mode 'ruby-mode "t" 'ruby-toggle-block)
 

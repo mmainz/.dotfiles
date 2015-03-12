@@ -15,6 +15,7 @@
                             smartparens
                             ruby-end
                             iedit
+                            hydra
                             evil-leader
                             evil
                             evil-surround
