@@ -23,7 +23,7 @@
 (global-company-mode)
 (setq company-idle-delay 0)
 
-;; (require 'projectile)
+(require 'projectile)
 (setq projectile-require-project-root nil)
 (setq projectile-globally-ignored-directories
       (append projectile-globally-ignored-directories '("node_modules"

@@ -1,9 +1,59 @@
 (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
 
 ;; hydra
-(defhydra hydra-theme ()
+(defhydra hydra-theme (:hint nil :exit t)
+  "
+Theme
+-----
+_d_: dark theme
+_l_: light theme
+"
   ("d" switch-theme-background-color-dark)
   ("l" switch-theme-background-color-light))
+
+(defhydra hydra-dired (:hint nil :exit t)
+  "
+Dired
+-----
+_d_: select directory
+_c_: current directory
+_o_: current directory in other window
+"
+  ("d" ido-dired)
+  ("c" dired-jump)
+  ("o" dired-jump-other-window))
+
+(defhydra hydra-iedit (:hint nil)
+  "
+iedit
+-----
+_e_: toggle iedit
+_f_: restrict to function
+_r_: restrict to region
+_l_: restrict to line
+"
+  ("e" iedit-mode)
+  ("f" iedit-restrict-function)
+  ("r" iedit-restrict-region)
+  ("l" iedit-restrict-current-line))
+
+(defhydra hydra-ruby (:hint nil :exit t)
+  "
+Ruby
+----
+_b_: toggle block syntax
+"
+  ("b" ruby-toggle-block))
+
+(defhydra hydra-elisp (:hint nil :exit t)
+  "
+elisp
+-----
+_b_: eval buffer
+_r_: eval region
+"
+  ("b" eval-buffer)
+  ("r" eval-region))
 
 ;; evil-leader
 (evil-leader/set-leader "m")
@@ -17,20 +67,19 @@
   "5" 'make-frame-command
   "i" 'indent-region-or-buffer
   "b" 'helm-mini
-  "d" 'ido-dired
+  "d" 'hydra-dired/body
   "c" 'comment-or-uncomment-region
   "h" 'windmove-left
   "j" 'windmove-down
   "k" 'windmove-up
   "l" 'windmove-right
-  "e" 'iedit-mode
-  "m" 'iedit-restrict-function
-  "n" 'iedit-restrict-current-line
+  "r" 'hydra-iedit/body
   "-" 'previous-buffer
   "." 'find-tag
   "t" 'hydra-theme/body)
 
-(evil-leader/set-key-for-mode 'ruby-mode "t" 'ruby-toggle-block)
+(evil-leader/set-key-for-mode 'ruby-mode "e" 'hydra-ruby/body)
+(evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'hydra-elisp/body)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
