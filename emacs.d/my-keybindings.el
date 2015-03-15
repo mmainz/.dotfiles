@@ -37,6 +37,22 @@ _l_: restrict to line
   ("r" iedit-restrict-region)
   ("l" iedit-restrict-current-line))
 
+(defhydra hydra-highlight (:hint nil :exit t)
+  "
+highlight-symbol
+----------------
+_s_: highlight at point
+_d_: disable highlights
+_n_: next occurrence
+_p_: previous occurrence
+_r_: replace symbol
+"
+  ("s" highlight-symbol-at-point)
+  ("d" highlight-symbol-remove-all)
+  ("n" highlight-symbol-next)
+  ("p" highlight-symbol-prev)
+  ("r" highlight-symbol-query-replace))
+
 (defhydra hydra-ruby (:hint nil :exit t)
   "
 Ruby
@@ -74,6 +90,7 @@ _r_: eval region
   "k" 'windmove-up
   "l" 'windmove-right
   "r" 'hydra-iedit/body
+  "s" 'hydra-highlight/body
   "-" 'previous-buffer
   "." 'find-tag
   "t" 'hydra-theme/body)

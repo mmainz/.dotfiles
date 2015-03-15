@@ -21,6 +21,7 @@
                             evil-surround
                             evil-matchit
                             evil-visualstar
+                            highlight-symbol
                             ace-jump-mode
                             clojure-mode
                             web-mode
