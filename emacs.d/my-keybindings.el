@@ -18,10 +18,12 @@ Dired
 _d_: select directory
 _c_: current directory
 _o_: current directory in other window
+_f_: reveal in finder
 "
   ("d" ido-dired)
   ("c" dired-jump)
-  ("o" dired-jump-other-window))
+  ("o" dired-jump-other-window)
+  ("f" reveal-in-finder))
 
 (defhydra hydra-iedit (:hint nil)
   "

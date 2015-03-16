@@ -12,6 +12,7 @@
                             company
                             projectile
                             helm-projectile
+                            reveal-in-finder
                             smartparens
                             ruby-end
                             iedit
