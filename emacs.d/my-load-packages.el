@@ -13,15 +13,11 @@
 
 ;; (require 'helm-config)
 (setq helm-split-window-in-side-p t
-      helm-buffers-fuzzy-matching t
       helm-ff-file-name-history-use-recentf t
       helm-display-header-line nil)
 (set-face-background 'helm-selection "#661100")
 (set-face-foreground 'helm-selection "#bbbbbb")
 (set-face-attribute 'helm-source-header nil :height 0.1)
-(setq helm-autoresize-max-height 30)
-(setq helm-autoresize-min-height 5)
-(helm-autoresize-mode 1)
 (helm-mode 1)
 
 ;; (require 'company)
@@ -33,6 +29,7 @@
 (setq projectile-globally-ignored-directories
       (append projectile-globally-ignored-directories '("node_modules"
                                                         "bower_components")))
+(setq projectile-enable-caching t)
 (projectile-global-mode)
 
 ;; (require 'helm-projectile)
