@@ -1,6 +1,3 @@
-(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
-
-;; hydra
 (defhydra hydra-theme (:hint nil :exit t)
   "
 Theme
@@ -55,6 +52,28 @@ _r_: replace symbol
   ("p" highlight-symbol-prev)
   ("r" highlight-symbol-query-replace))
 
+(defhydra hydra-smartparens (:hint nil)
+  "
+smartparens
+-----------
+_s_: split
+_S_: splice
+_r_: raise
+_j_: join
+_l_: forward slurp
+_L_: backward barf
+_h_: backward slurp
+_H_: forward barf
+"
+  ("s" sp-split-sexp)
+  ("S" sp-splice-sexp)
+  ("r" sp-raise-sexp)
+  ("j" sp-join-sexp)
+  ("l" sp-forward-slurp-sexp)
+  ("L" sp-backward-barf-sexp)
+  ("h" sp-backward-slurp-sexp)
+  ("H" sp-forward-barf-sexp))
+
 (defhydra hydra-ruby (:hint nil :exit t)
   "
 Ruby
@@ -73,7 +92,9 @@ _r_: eval region
   ("b" eval-buffer)
   ("r" eval-region))
 
-;; evil-leader
+;; evil
+(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
+
 (evil-leader/set-leader "m")
 (evil-leader/set-key
   "x" 'helm-M-x
@@ -91,6 +112,7 @@ _r_: eval region
   "j" 'windmove-down
   "k" 'windmove-up
   "l" 'windmove-right
+  "p" 'hydra-smartparens/body
   "r" 'hydra-iedit/body
   "s" 'hydra-highlight/body
   "-" 'previous-buffer
@@ -103,13 +125,3 @@ _r_: eval region
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
-
-;; smartparens
-(global-set-key (kbd "M-s") 'sp-split-sexp)
-(global-set-key (kbd "M-S") 'sp-splice-sexp)
-(global-set-key (kbd "M-r") 'sp-raise-sexp)
-(global-set-key (kbd "M-j") 'sp-join-sexp)
-(global-set-key (kbd "C-)") 'sp-forward-slurp-sexp)
-(global-set-key (kbd "C-(") 'sp-backward-slurp-sexp)
-(global-set-key (kbd "M-)") 'sp-forward-barf-sexp)
-(global-set-key (kbd "M-(") 'sp-backward-barf-sexp)
