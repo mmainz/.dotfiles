@@ -11,7 +11,8 @@
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
 
-;; (require 'helm-config)
+(require 'helm)
+(require 'helm-config)
 (setq helm-split-window-in-side-p t
       helm-ff-file-name-history-use-recentf t
       helm-display-header-line nil)
