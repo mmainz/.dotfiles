@@ -56,14 +56,11 @@ _r_: replace symbol
   "
 smartparens
 -----------
-_s_: split
-_S_: splice
+_s_: split/splice
 _r_: raise
 _j_: join
-_l_: forward slurp
-_L_: backward barf
-_h_: backward slurp
-_H_: forward barf
+_l_: forward slurp/backward barf
+_h_: backward slurp/forward barf
 "
   ("s" sp-split-sexp)
   ("S" sp-splice-sexp)
@@ -91,6 +88,27 @@ _r_: eval region
 "
   ("b" eval-buffer)
   ("r" eval-region))
+
+(defhydra hydra-clojure (:hint nil :exit t)
+  "
+Clojure
+-------
+_b_: load buffer
+_d_: show docs
+_f_: load file
+_j_: jack in
+_m_: macro expand
+_n_: set namespace in REPL
+_t_: run tests
+"
+  ("b" cider-load-buffer)
+  ("d" cider-doc)
+  ("f" cider-load-file)
+  ("j" cider-jack-in)
+  ("m" cider-macroexpand-1)
+  ("n" cider-repl-set-ns)
+  ("t" cider-test-run-tests))
+
 
 ;; evil
 (define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
@@ -121,6 +139,7 @@ _r_: eval region
 
 (evil-leader/set-key-for-mode 'ruby-mode "e" 'hydra-ruby/body)
 (evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'hydra-elisp/body)
+(evil-leader/set-key-for-mode 'clojure-mode "e" 'hydra-clojure/body)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
