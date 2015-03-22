@@ -4,6 +4,7 @@ set -x GIT_EDITOR 'vim'
 alias tpr="touch ~/.pow/restart.txt"
 alias ec="emacsclient -n"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+alias udate="date +\"%Y%d%m%H%m%s\""
 
 set PATH $HOME/.rbenv/bin $PATH
 set PATH $HOME/.rbenv/shims $PATH
