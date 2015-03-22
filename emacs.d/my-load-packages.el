@@ -57,6 +57,9 @@
 ;; (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
+;; (require 'clojure-mode)
+(add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+
 ;; (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
