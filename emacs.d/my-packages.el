@@ -10,6 +10,7 @@
                             flx-ido
                             helm
                             company
+                            ag
                             projectile
                             helm-projectile
                             reveal-in-finder
