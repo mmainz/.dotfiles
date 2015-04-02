@@ -122,11 +122,13 @@ _t_: run tests
   "2" 'split-window-below
   "3" 'split-window-right
   "5" 'make-frame-command
+  "a" 'projectile-ag
   "i" 'indent-region-or-buffer
   "b" 'helm-mini
   "d" 'hydra-dired/body
   "c" 'comment-or-uncomment-region
   "h" 'windmove-left
+  "g" 'magit-status
   "j" 'windmove-down
   "k" 'windmove-up
   "l" 'windmove-right
