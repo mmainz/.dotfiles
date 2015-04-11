@@ -55,6 +55,10 @@
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
 
+;; but do wrap long lines for markdown files
+(add-to-list 'auto-mode-alist '("\\.md\\'" . visual-line-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . visual-line-mode))
+
 ;; reload files that were changed externally
 (global-auto-revert-mode t)
 
