@@ -1,5 +1,5 @@
-set -x EDITOR 'vim'
-set -x GIT_EDITOR 'vim'
+set -x EDITOR 'vi'
+set -x GIT_EDITOR 'vi'
 
 alias tpr="touch ~/.pow/restart.txt"
 alias ec="emacsclient -n"
