@@ -33,6 +33,7 @@
                             markdown-mode
                             haml-mode
                             go-mode
+                            elixir-mode
                             undo-tree
                             cider
                             inf-ruby
