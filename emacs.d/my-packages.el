@@ -6,6 +6,7 @@
 (package-initialize)
 
 (defvar required-packages '(color-theme-solarized
+                            smart-mode-line
                             magit
                             flx-ido
                             helm

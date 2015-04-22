@@ -4,6 +4,10 @@
 (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))
 (enable-theme 'solarized)
 
+;; (require 'smart-mode-line)
+(setq sml/theme 'respectful)
+(sml/setup)
+
 ;; (require 'flx-ido)
 (ido-mode 1)
 (ido-everywhere 1)
