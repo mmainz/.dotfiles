@@ -7,6 +7,7 @@
 
 (defvar required-packages '(color-theme-solarized
                             smart-mode-line
+                            smart-mode-line-powerline-theme
                             magit
                             flx-ido
                             helm

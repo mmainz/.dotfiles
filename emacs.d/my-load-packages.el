@@ -5,7 +5,8 @@
 (enable-theme 'solarized)
 
 ;; (require 'smart-mode-line)
-(setq sml/theme 'respectful)
+(setq powerline-arrow-shape 'arrow)
+(setq sml/theme 'powerline)
 (sml/setup)
 
 ;; (require 'flx-ido)
