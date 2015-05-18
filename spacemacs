@@ -138,6 +138,7 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (add-hook 'hack-local-variables-hook (lambda () (setq truncate-lines t)))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
