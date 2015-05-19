@@ -1,0 +1,6 @@
+[submodule "nvm-wrapper"]
+	path = config/fish/nvm-wrapper
+	url = git://github.com/passcod/nvm-fish-wrapper.git
+[submodule "spacemacs"]
+	path = tag-SPACEMACS/emacs.d
+	url = http://github.com/syl20bnr/spacemacs
