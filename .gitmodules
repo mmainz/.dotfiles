@@ -4,3 +4,6 @@
 [submodule "spacemacs"]
 	path = tag-SPACEMACS/emacs.d
 	url = http://github.com/syl20bnr/spacemacs
+[submodule "nvm"]
+	path = nvm
+	url = https://github.com/creationix/nvm.git
