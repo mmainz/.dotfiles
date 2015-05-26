@@ -139,6 +139,7 @@ before layers configuration."
 layers configuration."
   (setq require-final-newline t)
   (setq js-indent-level 2)
+  (setq js2-basic-offset 2)
   (add-hook 'hack-local-variables-hook (lambda ()
                                          (setq truncate-lines t)))
 )
