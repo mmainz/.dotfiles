@@ -142,6 +142,10 @@ layers configuration."
   (setq js2-basic-offset 2)
   (add-hook 'hack-local-variables-hook (lambda ()
                                          (setq truncate-lines t)))
+  (add-hook 'web-mode-hook (lambda ()
+                             (setq web-mode-markup-indent-offset 2)
+                             (setq web-mode-css-indent-offset 2)
+                             (setq web-mode-code-indent-offset 2)))
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
