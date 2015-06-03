@@ -1,8 +1,9 @@
-set -x EDITOR 'vi'
-set -x GIT_EDITOR 'vi'
+set -x ALTERNATE_EDITOR ""
+set -x EDITOR "emacsclient -t"
+set -x GIT_EDITOR "emacsclient -t"
 
+alias ec="emacsclient -t"
 alias tpr="touch ~/.pow/restart.txt"
-alias ec="emacsclient -n"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias udate="date +\"%Y%d%m%H%m%s\""
 
