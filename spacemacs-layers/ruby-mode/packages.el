@@ -10,15 +10,12 @@
 ;;
 ;;; License: GPLv3
 
-(defvar ruby-mode-packages
-  '(
-    ruby-mode
-    )
-  "List of all packages to install and/or initialize. Built-in packages
-which require an initialization must be listed explicitly in the list.")
+(setq ruby-mode-packages
+      '(
+        ruby-mode
+        ))
 
-(defvar ruby-mode-excluded-packages '(enh-ruby-mode)
-  "List of packages to exclude.")
+(setq ruby-mode-excluded-packages '(enh-ruby-mode))
 
 ;; For each package, define a function ruby-mode/init-<package-ruby-mode>
 ;;

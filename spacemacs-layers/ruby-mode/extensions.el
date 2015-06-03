@@ -10,17 +10,15 @@
 ;;
 ;;; License: GPLv3
 
-(defvar ruby-mode-pre-extensions
-  '(
-    ;; pre extension ruby-modes go here
-    )
-  "List of all extensions to load before the packages.")
+(setq ruby-mode-pre-extensions
+      '(
+        ;; pre extension ruby-modes go here
+        ))
 
-(defvar ruby-mode-post-extensions
-  '(
-    ;; post extension ruby-modes go here
-    )
-  "List of all extensions to load after the packages.")
+(setq ruby-mode-post-extensions
+      '(
+        ;; post extension ruby-modes go here
+        ))
 
 ;; For each extension, define a function ruby-mode/init-<extension-ruby-mode>
 ;;
