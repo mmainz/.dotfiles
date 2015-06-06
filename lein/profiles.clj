@@ -1,2 +1,2 @@
-{:user {:plugins [[cider/cider-nrepl "0.8.2"]
-                  [lein-ancient "0.6.5"]]}}
+{:user {:plugins [[cider/cider-nrepl "0.9.0-SNAPSHOT"]
+                  [lein-ancient "0.6.7"]]}}
