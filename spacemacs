@@ -20,9 +20,10 @@
      go
      html
      javascript
-     editorconfig
      emacs-lisp
      shell
+     auto-save
+     ruby-mode
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -142,6 +143,7 @@ layers configuration."
   (setq gc-cons-threshold 200000000)
 
   (setq powerline-default-separator 'slant)
+
   (setq require-final-newline t)
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
