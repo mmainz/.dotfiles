@@ -139,6 +139,8 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (setq gc-cons-threshold 200000000)
+
   (setq powerline-default-separator 'slant)
   (setq require-final-newline t)
   (setq js-indent-level 2)
