@@ -142,6 +142,8 @@ before layers configuration."
 layers configuration."
   (setq powerline-default-separator 'slant)
 
+  (setq company-idle-delay 0)
+
   (setq require-final-newline t)
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
