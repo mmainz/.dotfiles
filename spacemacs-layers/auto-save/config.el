@@ -31,3 +31,5 @@ The body of the advice is in BODY."
                   select-window-0)
                  before
                  (save-buffer-if-visiting-file))
+
+(add-hook 'focus-out-hook 'save-buffer-if-visiting-file)
