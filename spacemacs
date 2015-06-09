@@ -152,6 +152,8 @@ layers configuration."
   (setq require-final-newline t)
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
+  (setq css-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
   (add-hook 'before-save-hook 'whitespace-cleanup)
   (add-hook 'hack-local-variables-hook (lambda ()
                                          (setq truncate-lines t)))
