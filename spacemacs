@@ -143,6 +143,7 @@ layers configuration."
   (setq powerline-default-separator 'slant)
 
   (setq company-idle-delay 0)
+  (global-company-mode)
 
   (setq require-final-newline t)
   (setq js-indent-level 2)
