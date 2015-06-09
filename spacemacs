@@ -12,6 +12,7 @@
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     ;; contribution layers
      auto-completion
      markdown
      syntax-checking
@@ -22,6 +23,9 @@
      javascript
      emacs-lisp
      shell
+     org
+
+     ;; private layers
      auto-save
      ruby-mode
      )
