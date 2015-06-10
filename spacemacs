@@ -150,6 +150,8 @@ layers configuration."
   (setq company-idle-delay 0)
   (global-company-mode)
 
+  (global-flycheck-mode)
+
   (setq require-final-newline t)
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
