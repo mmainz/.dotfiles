@@ -24,6 +24,7 @@
      emacs-lisp
      shell
      org
+     spotify
 
      ;; private layers
      auto-save
