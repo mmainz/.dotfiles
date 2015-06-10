@@ -22,6 +22,7 @@
      html
      javascript
      emacs-lisp
+     erlang-elixir
      shell
      org
      spotify
