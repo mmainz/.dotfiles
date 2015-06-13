@@ -149,6 +149,7 @@ layers configuration."
   (setq powerline-default-separator 'slant)
 
   (setq company-idle-delay 0)
+  (setq company-dabbrev-downcase nil)
   (global-company-mode)
 
   (global-flycheck-mode)
