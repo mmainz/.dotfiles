@@ -22,3 +22,7 @@ set -x GOPATH $HOME/Development/go
 set -x PATH $PATH $GOPATH/bin
 
 set -x JAVA_OPTS "-Xms128m -Xmx1024m"
+
+function fish_title
+  true
+end

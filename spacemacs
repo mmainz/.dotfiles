@@ -156,6 +156,8 @@ layers configuration."
 
   (setq alchemist-complete-debug-mode nil)
 
+  (setq shell-pop-term-shell "/usr/bin/fish")
+
   (setq require-final-newline t)
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
