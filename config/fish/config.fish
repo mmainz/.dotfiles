@@ -1,5 +1,5 @@
 set -x EDITOR "emacsclient -n"
-set -x GIT_EDITOR "emacsclient -n"
+set -x GIT_EDITOR "emacsclient"
 
 alias ec="emacsclient -n"
 alias tpr="touch ~/.pow/restart.txt"
