@@ -159,6 +159,9 @@ layers configuration."
   (setq shell-pop-term-shell "/usr/bin/fish")
 
   (setq require-final-newline t)
+  (add-hook 'after-change-major-mode-hook
+            (function (lambda ()
+                        (setq evil-shift-width 2))))
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
   (setq css-indent-offset 2)
@@ -170,7 +173,7 @@ layers configuration."
                              (setq web-mode-markup-indent-offset 2)
                              (setq web-mode-css-indent-offset 2)
                              (setq web-mode-code-indent-offset 2)))
-)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
