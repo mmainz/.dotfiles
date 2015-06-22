@@ -1,4 +1,4 @@
-(setq auto-save-default t)
+(setq auto-save-default nil)
 (setq auto-save-file-name-transforms `((".*" ,spacemacs-cache-directory t)))
 (add-hook 'auto-save-hook 'save-buffer-if-visiting-file)
 
