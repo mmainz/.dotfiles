@@ -1,7 +1,3 @@
-(setq auto-save-default nil)
-(setq auto-save-file-name-transforms `((".*" ,spacemacs-cache-directory t)))
-(add-hook 'auto-save-hook 'save-buffer-if-visiting-file)
-
 (defmacro advise-commands (advice-name commands class &rest body)
   "Apply advice named ADVICE-NAME to multiple COMMANDS.
 The body of the advice is in BODY."
