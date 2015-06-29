@@ -157,8 +157,8 @@ layers configuration."
   (setq alchemist-complete-debug-mode nil)
 
   (if (eq system-type 'darwin)
-      (setq shell-pop-term-shell "/usr/local/bin/fish")
-    (setq shell-pop-term-shell "/usr/bin/fish"))
+      (setq shell-pop-term-shell "/usr/local/bin/zsh")
+    (setq shell-pop-term-shell "/usr/bin/zsh"))
 
   (setq require-final-newline t)
   (add-hook 'after-change-major-mode-hook
