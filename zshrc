@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/mario/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -68,7 +68,7 @@ export PATH="$HOME/Development/go/:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.exenv/bin:$PATH"
-export PATH="/home/mario/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export PATH="./bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
