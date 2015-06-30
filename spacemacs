@@ -149,6 +149,9 @@ before layers configuration."
 layers configuration."
   (setq powerline-default-separator 'slant)
 
+  (setq fci-rule-color "dimgray")
+  (add-hook 'after-change-major-mode-hook 'fci-mode)
+
   (setq company-idle-delay 0)
   (setq company-dabbrev-downcase nil)
   (global-company-mode)
