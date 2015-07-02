@@ -98,5 +98,3 @@ source $ZSH/oh-my-zsh.sh
 
 alias ec="emacsclient -n"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-
-[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
