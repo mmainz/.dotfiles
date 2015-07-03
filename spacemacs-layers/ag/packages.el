@@ -25,7 +25,7 @@
 (defun ag/init-ag ()
   "Initialize my package"
   (use-package ag
-    :config (evil-leader/set-key "psA" 'ag-project))
+    :config (evil-leader/set-key "sal" 'ag-project))
   )
 ;;
 ;; Often the body of an initialize function uses `use-package'

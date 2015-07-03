@@ -17,12 +17,14 @@
      markdown
      syntax-checking
      git
+     github
+     version-control
      clojure
      go
      html
      javascript
      emacs-lisp
-     erlang-elixir
+     elixir
      shell
      org
      spotify
