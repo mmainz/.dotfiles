@@ -149,10 +149,14 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (add-hook 'after-change-major-mode-hook
+            (function (lambda ()
+                        (setq evil-shift-width 2)
+                        (fci-mode))))
+
   (setq powerline-default-separator 'slant)
 
   (setq fci-rule-color "dimgray")
-  (add-hook 'after-change-major-mode-hook 'fci-mode)
 
   (setq company-idle-delay 0)
   (setq company-dabbrev-downcase nil)
@@ -167,9 +171,6 @@ layers configuration."
     (setq shell-pop-term-shell "/usr/bin/zsh"))
 
   (setq require-final-newline t)
-  (add-hook 'after-change-major-mode-hook
-            (function (lambda ()
-                        (setq evil-shift-width 2))))
   (setq js-indent-level 2)
   (setq js2-basic-offset 2)
   (setq css-indent-offset 2)
