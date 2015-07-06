@@ -61,22 +61,26 @@ fi
 
 export GIT_EDITOR "emacsclient"
 
+
 export PATH="/usr/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/Development/go/:$PATH"
+
+export GOPATH="$HOME/Development/go"
+export PATH="$GOPATH/bin:$PATH"
+
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
+
 export PATH="$HOME/.exenv/bin:$PATH"
+eval "$(exenv init -)"
+
 export PATH="$HOME/bin:$PATH"
 export PATH="./bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 source "$HOME/.nvm/nvm.sh"
 
-eval "$(exenv init -)"
-
-export GOPATH="$HOME/Development/go"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
