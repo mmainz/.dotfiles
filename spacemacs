@@ -156,6 +156,8 @@ layers configuration."
                         (setq evil-shift-width 2)
                         (fci-mode))))
 
+  (setq compilation-scroll-output 'first-error)
+
   (setq powerline-default-separator 'slant)
 
   (setq fci-rule-color "dimgray")
