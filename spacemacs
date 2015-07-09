@@ -144,7 +144,9 @@ before layers configuration."
    )
   ;; User initialization goes here
   (setq
-   ruby-enable-ruby-on-rails-support t)
+   ruby-version-manager 'rbenv
+   ruby-enable-ruby-on-rails-support t
+   )
   )
 
 (defun dotspacemacs/config ()
