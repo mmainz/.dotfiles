@@ -188,6 +188,21 @@ layers configuration."
                              (setq web-mode-markup-indent-offset 2)
                              (setq web-mode-css-indent-offset 2)
                              (setq web-mode-code-indent-offset 2)))
+
+  (push '("*compilation*"
+          :dedicated t
+          :position bottom
+          :stick t
+          :noselect nil
+          :height 0.3)
+        popwin:special-display-config)
+  (push '("*alchemist-test-report*"
+          :dedicated t
+          :position bottom
+          :stick t
+          :noselect nil
+          :height 0.3)
+        popwin:special-display-config)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
