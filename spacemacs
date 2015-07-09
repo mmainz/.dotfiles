@@ -193,14 +193,14 @@ layers configuration."
           :dedicated t
           :position bottom
           :stick t
-          :noselect nil
+          :noselect t
           :height 0.3)
         popwin:special-display-config)
   (push '("*alchemist-test-report*"
           :dedicated t
           :position bottom
           :stick t
-          :noselect nil
+          :noselect t
           :height 0.3)
         popwin:special-display-config)
   )
