@@ -30,8 +30,8 @@
      spotify
 
      ;; private layers
+     proper-ruby
      auto-save
-     ruby-mode
      ag
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -143,6 +143,8 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
+  (setq
+   ruby-enable-ruby-on-rails-support t)
   )
 
 (defun dotspacemacs/config ()
