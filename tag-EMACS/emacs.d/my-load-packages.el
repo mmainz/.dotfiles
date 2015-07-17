@@ -1,13 +1,10 @@
-(setq frame-background-mode 'light)
-(load-theme 'solarized t)
+(require 'darcula-theme)
 (set-frame-font "Inconsolata-14")
 (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))
-(enable-theme 'solarized)
 
-;; (require 'smart-mode-line)
-(setq powerline-arrow-shape 'arrow)
-(setq sml/theme 'powerline)
-(sml/setup)
+;; (require 'ocodo-svg-modelines)
+(ocodo-svg-modelines-init)
+(smt/set-theme 'ocodo-mesh-aqua-smt)
 
 ;; (require 'flx-ido)
 (ido-mode 1)
