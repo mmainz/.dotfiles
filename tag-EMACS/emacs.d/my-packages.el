@@ -26,7 +26,7 @@
                             evil-visualstar
                             guide-key
                             highlight-symbol
-                            ace-jump-mode
+                            fill-column-indicator
                             clojure-mode
                             web-mode
                             coffee-mode

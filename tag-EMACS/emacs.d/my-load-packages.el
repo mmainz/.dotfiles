@@ -65,6 +65,12 @@
 (setq guide-key/popup-window-position'bottom)
 (guide-key-mode 1)
 
+;; (require 'fill-column-indicator)
+(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+(setq fci-rule-column 80)
+(setq fci-rule-color "dim gray")
+(global-fci-mode 1)
+
 ;; (require 'clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
