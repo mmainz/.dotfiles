@@ -1,6 +1,3 @@
-;; don't show welcome screen
-(setq inhibit-startup-message t)
-
 ;; Setting rbenv path
 (setenv "PATH" (concat (getenv "HOME") "/.rbenv/shims:"
                        (getenv "HOME") "/.rbenv/bin:"

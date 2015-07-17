@@ -1,42 +1,4 @@
-(defhydra hydra-theme (:hint nil :exit t)
-  "
-Theme
------
-_d_: dark theme
-_l_: light theme
-"
-  ("d" switch-theme-background-color-dark)
-  ("l" switch-theme-background-color-light))
-
-(defhydra hydra-dired (:hint nil :exit t)
-  "
-Dired
------
-_d_: select directory
-_c_: current directory
-_o_: current directory in other window
-_f_: reveal in finder
-"
-  ("d" ido-dired)
-  ("c" dired-jump)
-  ("o" dired-jump-other-window)
-  ("f" reveal-in-finder))
-
-(defhydra hydra-iedit (:hint nil)
-  "
-iedit
------
-_e_: toggle iedit
-_f_: restrict to function
-_r_: restrict to region
-_l_: restrict to line
-"
-  ("e" iedit-mode)
-  ("f" iedit-restrict-function)
-  ("r" iedit-restrict-region)
-  ("l" iedit-restrict-current-line))
-
-(defhydra hydra-highlight (:hint nil :exit t)
+(defhydra hydra-highlight (:hint nil)
   "
 highlight-symbol
 ----------------
@@ -71,77 +33,51 @@ _h_: backward slurp/forward barf
   ("h" sp-backward-slurp-sexp)
   ("H" sp-forward-barf-sexp))
 
-(defhydra hydra-ruby (:hint nil :exit t)
-  "
-Ruby
-----
-_b_: toggle block syntax
-"
-  ("b" ruby-toggle-block))
-
-(defhydra hydra-elisp (:hint nil :exit t)
-  "
-elisp
------
-_b_: eval buffer
-_r_: eval region
-"
-  ("b" eval-buffer)
-  ("r" eval-region))
-
-(defhydra hydra-clojure (:hint nil :exit t)
-  "
-Clojure
--------
-_b_: load buffer
-_d_: show docs
-_f_: load file
-_j_: jack in
-_m_: macro expand
-_n_: set namespace in REPL
-_t_: run tests
-"
-  ("b" cider-load-buffer)
-  ("d" cider-doc)
-  ("f" cider-load-file)
-  ("j" cider-jack-in)
-  ("m" cider-macroexpand-1)
-  ("n" cider-repl-set-ns)
-  ("t" cider-test-run-tests))
-
-
 ;; evil
-(define-key evil-normal-state-map (kbd "SPC") 'ace-jump-char-mode)
-
-(evil-leader/set-leader "m")
+(evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "x" 'helm-M-x
-  "f" 'helm-projectile-find-file
-  "0" 'delete-window
-  "1" 'delete-other-windows
-  "2" 'split-window-below
-  "3" 'split-window-right
-  "5" 'make-frame-command
   "a" 'projectile-ag
-  "i" 'indent-region-or-buffer
   "b" 'helm-mini
-  "d" 'hydra-dired/body
   "c" 'comment-or-uncomment-region
-  "h" 'windmove-left
+  "dc" 'dired-jump
+  "dd" 'ido-dired
+  "df" 'reveal-in-finder
+  "do" 'dired-jump-other-window
   "g" 'magit-status
+  "h" 'windmove-left
+  "H" 'hydra-highlight/body
+  "i" 'indent-region-or-buffer
   "j" 'windmove-down
   "k" 'windmove-up
   "l" 'windmove-right
-  "p" 'hydra-smartparens/body
-  "r" 'hydra-iedit/body
-  "s" 'hydra-highlight/body
+  "L" 'hydra-smartparens/body
+  "pf" 'helm-projectile-find-file
+  "pp" 'helm-projectile-switch-project
+  "r" 'iedit-mode
+  "s" 'save-buffer
+  "wc" 'delete-window
+  "wC" 'delete-other-windows
+  "wv" 'split-window-right
+  "w-" 'split-window-below
+  "x" 'helm-M-x
   "-" 'previous-buffer
-  "." 'find-tag
-  "t" 'hydra-theme/body)
+  "+" 'next-buffer)
 
-(evil-leader/set-key-for-mode 'ruby-mode "e" 'hydra-ruby/body)
-(evil-leader/set-key-for-mode 'emacs-lisp-mode "e" 'hydra-elisp/body)
-(evil-leader/set-key-for-mode 'clojure-mode "e" 'hydra-clojure/body)
+(evil-leader/set-key-for-mode
+  'ruby-mode
+  "mb" 'ruby-toggle-block)
+
+(evil-leader/set-key-for-mode
+  'emacs-lisp-mode
+  "mb" 'eval-buffer
+  "mr" 'eval-region)
+
+(evil-leader/set-key-for-mode
+  'clojure-mode
+  "mb" 'cider-load-buffer
+  "md" 'cider-apropos-documentation
+  "mj" 'cider-jack-in
+  "mm" 'cider-macroexpand-1)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)

@@ -62,6 +62,12 @@
 ;; (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
+;; (require 'guide-key)
+(setq guide-key/guide-key-sequence '("<SPC>"))
+(setq guide-key/recursive-key-sequence-flag t)
+(setq guide-key/popup-window-position'bottom)
+(guide-key-mode 1)
+
 ;; (require 'clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
