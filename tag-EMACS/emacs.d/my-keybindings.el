@@ -60,6 +60,8 @@ _h_: backward slurp/forward barf
   "wv" 'split-window-right
   "w-" 'split-window-below
   "x" 'helm-M-x
+  ";p" 'open-packages-config
+  ";k" 'open-keybindings-config
   "-" 'previous-buffer
   "+" 'next-buffer)
 

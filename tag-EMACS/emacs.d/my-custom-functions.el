@@ -30,3 +30,13 @@
   (enable-theme 'solarized)
   (set-frame-parameter nil 'background-mode 'dark)
   (enable-theme 'solarized))
+
+(defun open-packages-config ()
+  "Open the my-packages.el file that configures the packages to be installed."
+  (interactive)
+  (find-file "~/.emacs.d/my-packages.el"))
+
+(defun open-keybindings-config ()
+  "Open the my-keybindings.el file that configures custom keybindings."
+  (interactive)
+  (find-file "~/.emacs.d/my-keybindings.el"))
