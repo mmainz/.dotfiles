@@ -40,3 +40,13 @@
   "Open the my-keybindings.el file that configures custom keybindings."
   (interactive)
   (find-file "~/.emacs.d/my-keybindings.el"))
+
+(defun open-load-packages-config ()
+  "Open the my-load-packages.el file that configures the packages."
+  (interactive)
+  (find-file "~/.emacs.d/my-load-packages.el"))
+
+(defun open-my-custom-functions ()
+  "Open the my-custom-functions.el that contains custom functions."
+  (interactive)
+  (find-file "~/.emacs.d/my-custom-functions.el"))

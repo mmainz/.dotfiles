@@ -61,6 +61,8 @@ _h_: backward slurp/forward barf
   "x" 'helm-M-x
   ";p" 'open-packages-config
   ";k" 'open-keybindings-config
+  ";l" 'open-load-packages-config
+  ";f" 'open-my-custom-functions
   "-" 'previous-buffer
   "+" 'next-buffer)
 
