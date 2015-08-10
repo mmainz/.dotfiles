@@ -40,6 +40,7 @@
                             undo-tree
                             cider
                             inf-ruby
+                            rspec-mode
                             flycheck
                             restclient
                             exec-path-from-shell))
