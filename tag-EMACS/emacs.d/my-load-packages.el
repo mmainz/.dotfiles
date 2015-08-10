@@ -59,6 +59,9 @@
 ;; (require 'evil-matchit)
 (global-evil-matchit-mode 1)
 
+;; (require 'avy)
+(setq aw-dispatch-always t)
+
 ;; (require 'guide-key)
 (setq guide-key/guide-key-sequence '("<SPC>"))
 (setq guide-key/recursive-key-sequence-flag t)

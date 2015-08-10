@@ -23,6 +23,8 @@
                             evil-surround
                             evil-matchit
                             evil-visualstar
+                            avy
+                            ace-window
                             guide-key
                             highlight-symbol
                             fill-column-indicator

@@ -43,17 +43,15 @@ _h_: backward slurp/forward barf
   "dd" 'ido-dired
   "do" 'dired-jump-other-window
   "g" 'magit-status
-  "h" 'windmove-left
   "H" 'hydra-highlight/body
   "i" 'indent-region-or-buffer
-  "j" 'windmove-down
-  "k" 'windmove-up
-  "l" 'windmove-right
+  "j" 'avy-goto-char
   "L" 'hydra-smartparens/body
   "pf" 'helm-projectile-find-file
   "pp" 'helm-projectile-switch-project
   "r" 'iedit-mode
   "s" 'save-buffer
+  "wa" 'ace-window
   "wc" 'delete-window
   "wC" 'delete-other-windows
   "wv" 'split-window-right
