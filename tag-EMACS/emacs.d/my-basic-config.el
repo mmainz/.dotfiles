@@ -76,5 +76,8 @@
 ;; set garbage collection threshold
 (setq gc-cons-threshold 10000000)
 
+;; auto-scroll in compilation windows
+(setq compilation-scroll-output t)
+
 ;; start server for remote calling with emacsclient
 (server-start)
