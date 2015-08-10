@@ -41,7 +41,6 @@ _h_: backward slurp/forward barf
   "c" 'comment-or-uncomment-region
   "dc" 'dired-jump
   "dd" 'ido-dired
-  "df" 'reveal-in-finder
   "do" 'dired-jump-other-window
   "g" 'magit-status
   "h" 'windmove-left
