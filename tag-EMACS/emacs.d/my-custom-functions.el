@@ -68,3 +68,10 @@
                      ,(kbd ",")
                      major-mode-map)))
           '(normal motion visual))))
+
+;; select-window functions for window numbers 1 to 10
+(dotimes (i 10)
+  (eval `(defun ,(intern (format "select-window-%s" i)) (&optional arg)
+           ,(format "Select the window with number %i." i)
+           (interactive)
+           (window-number-select ,i))))

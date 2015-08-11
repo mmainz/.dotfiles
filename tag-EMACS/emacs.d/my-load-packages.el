@@ -122,3 +122,10 @@
 ;; (require 'exec-path-from-shell)
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; external packages
+
+;; window-numbering
+(require 'window-number)
+(window-number-mode)
+(window-number-meta-mode)
