@@ -1,3 +1,5 @@
+(add-to-list 'load-path "~/.emacs.d/external/")
+
 (load "~/.emacs.d/my-packages.el")
 (load "~/.emacs.d/my-custom-functions.el")
 (load "~/.emacs.d/auto-save.el")
