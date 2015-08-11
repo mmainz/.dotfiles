@@ -50,3 +50,21 @@
   "Open the my-custom-functions.el that contains custom functions."
   (interactive)
   (find-file "~/.emacs.d/my-custom-functions.el"))
+
+(defun activate-major-mode-leader ()
+  "Set up `,' as a shortcut for `<SPC> m'."
+  (setq mode-map (cdr (assoc major-mode evil-leader--mode-maps)))
+  (when mode-map
+    (setq major-mode-map (lookup-key mode-map (kbd "m")))
+    (mapc (lambda (s)
+            (eval `(define-key
+                     ,(intern (format "evil-%S-state-local-map" s))
+                     ,(kbd ",")
+                     major-mode-map)))
+          '(normal motion))
+    (mapc (lambda (s)
+            (eval `(define-key
+                     ,(intern (format "evil-%S-state-local-map" s))
+                     ,(kbd ",")
+                     major-mode-map)))
+          '(normal motion visual))))

@@ -46,6 +46,7 @@
 
 ;; (require 'evil-leader)
 (global-evil-leader-mode)
+(add-hook 'after-change-major-mode-hook 'activate-major-mode-leader)
 
 ;; (require 'evil)
 (evil-mode 1)
@@ -63,9 +64,9 @@
 (setq aw-dispatch-always t)
 
 ;; (require 'guide-key)
-(setq guide-key/guide-key-sequence '("<SPC>"))
+(setq guide-key/guide-key-sequence '("<SPC>" ","))
 (setq guide-key/recursive-key-sequence-flag t)
-(setq guide-key/popup-window-position'bottom)
+(setq guide-key/popup-window-position 'bottom)
 (guide-key-mode 1)
 
 ;; (require 'fill-column-indicator)
