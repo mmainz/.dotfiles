@@ -123,6 +123,14 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;; (require 'nlinum)
+(add-hook 'nlinum-mode-hook
+          (lambda ()
+            (setq nlinum--width
+                  (length (number-to-string
+                           (count-lines (point-min) (point-max)))))))
+(global-nlinum-mode)
+
 ;; external packages
 
 ;; window-numbering
