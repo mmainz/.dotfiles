@@ -31,6 +31,11 @@
   (set-frame-parameter nil 'background-mode 'dark)
   (enable-theme 'solarized))
 
+(defun open-basic-config ()
+  "Open the my-basic-config.el file that contains general configuration."
+  (interactive)
+  (find-file "~/.emacs.d/my-basic-config.el"))
+
 (defun open-packages-config ()
   "Open the my-packages.el file that configures the packages to be installed."
   (interactive)

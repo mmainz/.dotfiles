@@ -68,10 +68,11 @@ _h_: backward slurp/forward barf
   "wv" 'split-window-right
   "w-" 'split-window-below
   "x" 'helm-M-x
-  ";p" 'open-packages-config
+  ";c" 'open-basic-config
+  ";f" 'open-my-custom-functions
   ";k" 'open-keybindings-config
   ";l" 'open-load-packages-config
-  ";f" 'open-my-custom-functions
+  ";p" 'open-packages-config
   "-" 'previous-buffer
   "+" 'next-buffer)
 
