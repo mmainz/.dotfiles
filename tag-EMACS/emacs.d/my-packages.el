@@ -43,8 +43,7 @@
                             rspec-mode
                             flycheck
                             restclient
-                            exec-path-from-shell
-                            nlinum))
+                            exec-path-from-shell))
 
 (defun packages-installed-p ()
   (loop for p in required-packages
