@@ -62,6 +62,7 @@ _h_: backward slurp/forward barf
   "pp" 'helm-projectile-switch-project
   "r" 'iedit-mode
   "s" 'save-buffer
+  "tn" 'linum-mode
   "wa" 'ace-window
   "wc" 'delete-window
   "wC" 'delete-other-windows
