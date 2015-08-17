@@ -1,3 +1,5 @@
+(global-set-key [M-down-mouse-1] 'facemenup-customize-face-at-mouse)
+
 (defhydra hydra-highlight (:hint nil)
   "
 highlight-symbol

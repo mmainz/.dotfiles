@@ -6,6 +6,8 @@
 (package-initialize)
 
 (defvar required-packages '(darcula-theme
+                            facemenu+
+                            eyedropper
                             paradox
                             ocodo-svg-modelines
                             magit
