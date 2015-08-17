@@ -6,6 +6,7 @@
 (package-initialize)
 
 (defvar required-packages '(darcula-theme
+                            paradox
                             ocodo-svg-modelines
                             magit
                             flx-ido
