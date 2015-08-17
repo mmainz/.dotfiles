@@ -75,6 +75,12 @@
 (setq fci-rule-color "dim gray")
 (global-fci-mode 1)
 
+;; (require rainbow-mode)
+(define-globalized-minor-mode global-rainbow-mode rainbow-mode
+  (lambda () (rainbow-mode 1)))
+
+(global-rainbow-mode 1)
+
 ;; (require 'clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
 
