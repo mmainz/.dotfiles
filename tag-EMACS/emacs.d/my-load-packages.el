@@ -75,10 +75,11 @@
 (global-fci-mode 1)
 
 ;; (require rainbow-mode)
-(define-globalized-minor-mode global-rainbow-mode rainbow-mode
-  (lambda () (rainbow-mode 1)))
-
-(global-rainbow-mode 1)
+(defun activate-rainbow-mode () (rainbow-mode 1))
+(add-hook 'emacs-lisp-mode-hook 'activate-rainbow-mode)
+(add-hook 'clojure-mode-hook 'activate-rainbow-mode)
+(add-hook 'elixir-mode-hook 'activate-rainbow-mode)
+(add-hook 'ruby-mode-hook 'activate-rainbow-mode)
 
 ;; (require 'clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
