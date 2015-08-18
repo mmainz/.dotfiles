@@ -20,6 +20,8 @@
       helm-display-header-line nil)
 (set-face-background 'helm-selection "#661100")
 (set-face-foreground 'helm-selection "#bbbbbb")
+(set-face-background 'helm-source-header "#333333")
+(set-face-foreground 'helm-source-header "#eeeeee")
 (helm-mode 1)
 
 ;; (require 'company)
