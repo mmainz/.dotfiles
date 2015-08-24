@@ -134,6 +134,18 @@ _h_: backward slurp/forward barf
 ;; iedit
 (global-set-key (kbd "C-;") 'iedit-mode)
 
+;; window selection
+(global-set-key (kbd "M-1") 'select-window-1)
+(global-set-key (kbd "M-2") 'select-window-2)
+(global-set-key (kbd "M-3") 'select-window-3)
+(global-set-key (kbd "M-4") 'select-window-4)
+(global-set-key (kbd "M-5") 'select-window-5)
+(global-set-key (kbd "M-6") 'select-window-6)
+(global-set-key (kbd "M-7") 'select-window-7)
+(global-set-key (kbd "M-8") 'select-window-8)
+(global-set-key (kbd "M-9") 'select-window-9)
+(global-set-key (kbd "M-0") 'select-window-0)
+
 ;; make magit evil-compliant
 (setq-default evil-overriding-maps
               '((magit-mode-map . nil)
