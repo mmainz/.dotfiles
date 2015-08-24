@@ -13,6 +13,22 @@ _0_: reset font size
   ("-" text-scale-decrease)
   ("0" (text-scale-set 0)))
 
+(defhydra hydra-timemachine (:hint nil)
+  "
+git time machine
+----------------
+_t_: toggle timemachine
+_p_: previous revision
+_n_: next revision
+_g_: goto revision
+_q_: quit timemachine
+"
+  ("t" git-timemachine)
+  ("p" git-timemachine-show-previous-revision)
+  ("n" git-timemachine-show-next-revision)
+  ("g" git-timemachine-show-nth-revision)
+  ("q" git-timemachine-quit))
+
 (defhydra hydra-highlight (:hint nil)
   "
 highlight-symbol
@@ -69,7 +85,8 @@ _h_: backward slurp/forward barf
   "dd" 'ido-dired
   "do" 'dired-jump-other-window
   "F" 'hydra-fontsize/body
-  "g" 'magit-status
+  "gs" 'magit-status
+  "gt" 'hydra-timemachine/body
   "H" 'hydra-highlight/body
   "i" 'indent-region-or-buffer
   "j" 'avy-goto-char

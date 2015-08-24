@@ -11,6 +11,7 @@
                             paradox
                             ocodo-svg-modelines
                             magit
+                            git-timemachine
                             flx-ido
                             helm
                             company
