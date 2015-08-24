@@ -79,5 +79,8 @@
 ;; auto-scroll in compilation windows
 (setq compilation-scroll-output t)
 
+;; maximize frame
+(toggle-frame-maximized)
+
 ;; start server for remote calling with emacsclient
 (server-start)
