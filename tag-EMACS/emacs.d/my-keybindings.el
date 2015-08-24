@@ -114,6 +114,9 @@ _h_: backward slurp/forward barf
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
 
+;; iedit
+(global-set-key (kbd "C-;") 'iedit-mode)
+
 ;; make magit evil-compliant
 (setq-default evil-overriding-maps
               '((magit-mode-map . nil)
