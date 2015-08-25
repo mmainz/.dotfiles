@@ -102,3 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias ec="emacsclient -n"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+clone-injixo() {
+    git clone https://github.com/injixo/"$1".git
+}
