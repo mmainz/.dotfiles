@@ -79,5 +79,5 @@
   (eval `(defun ,(intern (format "select-window-%s" i)) (&optional arg)
            ,(format "Select the window with number %i." i)
            (interactive)
-           (save-buffer)
+           (when (buffer-file-name) (save-buffer))
            (window-number-select ,i))))
