@@ -31,7 +31,6 @@
                             ace-window
                             guide-key
                             highlight-symbol
-                            fill-column-indicator
                             rainbow-mode
                             clojure-mode
                             web-mode
