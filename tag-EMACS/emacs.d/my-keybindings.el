@@ -125,7 +125,9 @@ _h_: backward slurp/forward barf
   "mb" 'cider-load-buffer
   "md" 'cider-apropos-documentation
   "mj" 'cider-jack-in
-  "mm" 'cider-macroexpand-1)
+  "ml" 'cider-eval-last-sexp
+  "mm" 'cider-macroexpand-1
+  "mp" 'cider-pprint-eval-last-sexp)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
