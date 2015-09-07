@@ -121,9 +121,14 @@
 ;; (require 'flycheck)
 (global-flycheck-mode)
 
+;; (require 'eshell-prompt-extras)
+(with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
+
 ;; (require 'exec-path-from-shell)
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+(exec-path-from-shell-initialize)
 
 ;; external packages
 

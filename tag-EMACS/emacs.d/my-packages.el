@@ -47,6 +47,7 @@
                             rspec-mode
                             flycheck
                             restclient
+                            eshell-prompt-extras
                             exec-path-from-shell))
 
 (defun packages-installed-p ()
