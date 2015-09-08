@@ -113,7 +113,8 @@ _h_: backward slurp/forward barf
 (evil-leader/set-key-for-mode
   'ruby-mode
   "mb" 'ruby-toggle-block
-  "mv" 'rspec-verify)
+  "mrf" 'rspec-verify
+  "mra" 'rspec-verify-all)
 
 (evil-leader/set-key-for-mode
   'emacs-lisp-mode
