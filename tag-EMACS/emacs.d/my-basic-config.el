@@ -76,8 +76,16 @@
 ;; set garbage collection threshold
 (setq gc-cons-threshold 10000000)
 
-;; auto-scroll in compilation windows
+;; customize compilation windows
 (setq compilation-scroll-output t)
+
+(defun my-compilation-mode-hook ()
+  (setq truncate-lines nil)
+  (set (make-local-variable 'truncate-partial-width-windows) nil))
+
+(add-hook 'compilation-mode-hook 'my-compilation-mode-hook)
+(add-hook 'rspec-compilation-mode-hook 'my-compilation-mode-hook)
+
 
 ;; maximize frame
 (toggle-frame-maximized)
