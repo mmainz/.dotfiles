@@ -79,6 +79,9 @@
 
 ;; (require 'clojure-mode)
 (add-to-list 'auto-mode-alist '("\\.boot\\'" . clojure-mode))
+(add-hook 'clojurescript-mode-hook
+          (lambda ()
+            (setq compilation-read-command nil)))
 
 ;; (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))

@@ -81,3 +81,13 @@
            (interactive)
            (when (buffer-file-name) (save-buffer))
            (window-number-select ,i))))
+
+(defun test-doo ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "lein doo phantom test once")))
+
+(defun test-doo-watch ()
+  (interactive)
+  (let ((default-directory (projectile-project-root)))
+    (compile "lein doo phantom test")))

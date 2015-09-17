@@ -131,6 +131,17 @@ _h_: backward slurp/forward barf
   "mm" 'cider-macroexpand-1
   "mp" 'cider-pprint-eval-last-sexp)
 
+(evil-leader/set-key-for-mode
+  'clojurescript-mode
+  "mb" 'cider-load-buffer
+  "md" 'cider-apropos-documentation
+  "mj" 'cider-jack-in-clojurescript
+  "ml" 'cider-eval-last-sexp
+  "mm" 'cider-macroexpand-1
+  "mp" 'cider-pprint-eval-last-sexp
+  "mtd" 'test-doo
+  "mtw" 'test-doo-watch)
+
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
