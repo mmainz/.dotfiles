@@ -27,6 +27,7 @@
 ;; (require 'company)
 (global-company-mode)
 (setq company-idle-delay 0)
+(setq company-dabbrev-downcase nil)
 
 (require 'projectile)
 (setq projectile-require-project-root nil)
