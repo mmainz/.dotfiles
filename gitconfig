@@ -1,6 +1,8 @@
+[credential]
+	helper = osxkeychain
 [user]
 	name = Mario Mainz
-	email = mainz.mario@googlemail.com
+	email = mario.mainz@invision.de
 [color]
 	ui = true
 [filter "media"]
@@ -8,5 +10,3 @@
 	smudge = git-media-smudge %f
 [push]
 	default = simple
-[credential]
-	helper = gnome-keyring
