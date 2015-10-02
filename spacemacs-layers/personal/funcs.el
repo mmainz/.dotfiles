@@ -1,7 +1,0 @@
-(defun execute-last-eshell-command ()
-  (interactive)
-  (let ((prev-buffer (current-buffer)))
-    (select-window (get-buffer-window "*eshell-1*"))
-    (eshell-get-next-from-history)
-    (eshell-send-input)
-    (select-window (get-buffer-window prev-buffer))))
