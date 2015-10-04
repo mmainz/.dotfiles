@@ -116,6 +116,8 @@
           (lambda ()
             (visual-line-mode)))
 
+(require 'alchemist)
+
 ;; (require 'undo-tree)
 (global-undo-tree-mode)
 

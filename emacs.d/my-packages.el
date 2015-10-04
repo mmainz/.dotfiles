@@ -41,6 +41,7 @@
                             haml-mode
                             go-mode
                             elixir-mode
+                            alchemist
                             undo-tree
                             cider
                             inf-ruby

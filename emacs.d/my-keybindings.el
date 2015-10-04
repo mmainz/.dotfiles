@@ -142,6 +142,15 @@ _h_: backward slurp/forward barf
   "mtd" 'test-doo
   "mtw" 'test-doo-watch)
 
+(evil-leader/set-key-for-mode
+  'elixir-mode
+  "meb" 'alchemist-eval-print-buffer
+  "mer" 'alchemist-eval-print-region
+  "mta" 'alchemist-mix-test
+  "mtb" 'alchemist-mix-test-this-buffer
+  "mtr" 'alchemist-mix-rerun-last-test
+  "mtt" 'alchemist-mix-test-at-point)
+
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
