@@ -100,6 +100,10 @@ _h_: backward slurp/forward barf
   "wa" 'ace-window
   "wc" 'delete-window
   "wC" 'delete-other-windows
+  "wpb" 'popwin:popup-buffer
+  "wpc" 'popwin:close-popup-window
+  "wpt" 'popwin:popup-buffer-tail
+  "wps" 'popwin:stick-popup-window
   "wv" 'split-window-right
   "w-" 'split-window-below
   "x" 'helm-M-x

@@ -29,6 +29,7 @@
                             evil-visualstar
                             avy
                             ace-window
+                            popwin
                             guide-key
                             highlight-symbol
                             rainbow-mode

@@ -65,6 +65,9 @@
 ;; (require 'avy)
 (setq aw-dispatch-always t)
 
+(require 'popwin)
+(popwin-mode 1)
+
 ;; (require 'guide-key)
 (setq guide-key/guide-key-sequence '("<SPC>" ","))
 (setq guide-key/recursive-key-sequence-flag t)
