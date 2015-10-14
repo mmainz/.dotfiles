@@ -1,18 +1,5 @@
 (global-set-key [M-down-mouse-1] 'facemenup-customize-face-at-mouse)
 
-(defhydra hydra-fontsize (:hint nil)
-  "
-Font scaling micro state
-------------------------
-_+_: increase font size
-_-_: decrease font size
-_0_: reset font size
-"
-  ("+" text-scale-increase)
-  ("=" text-scale-increase)
-  ("-" text-scale-decrease)
-  ("0" (text-scale-set 0)))
-
 (defhydra hydra-timemachine (:hint nil)
   "
 git time machine
@@ -85,7 +72,7 @@ _h_: backward slurp/forward barf
   "dc" 'dired-jump
   "dd" 'ido-dired
   "do" 'dired-jump-other-window
-  "F" 'hydra-fontsize/body
+  "F" 'zoom-in/out
   "gs" 'magit-status
   "gt" 'hydra-timemachine/body
   "H" 'hydra-highlight/body

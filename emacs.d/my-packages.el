@@ -7,6 +7,7 @@
 
 (defvar required-packages '(darcula-theme
                             facemenu+
+                            zoom-frm
                             eyedropper
                             paradox
                             ocodo-svg-modelines

@@ -2,6 +2,8 @@
 (set-frame-font "Inconsolata-14")
 (add-to-list 'default-frame-alist '(font . "Inconsolata-14"))
 
+(require 'zoom-frm)
+
 ;; (require 'ocodo-svg-modelines)
 (ocodo-svg-modelines-init)
 (smt/set-theme 'ocodo-mesh-aqua-smt)
