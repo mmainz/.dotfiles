@@ -14,6 +14,7 @@
                             magit
                             git-timemachine
                             flx-ido
+                            helm-flx
                             helm
                             company
                             ag

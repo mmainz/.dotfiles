@@ -15,6 +15,9 @@
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
 
+(require 'helm-flx)
+(helm-flx-mode +1)
+
 (require 'helm)
 (require 'helm-config)
 (setq helm-split-window-in-side-p t
