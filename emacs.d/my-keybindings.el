@@ -120,7 +120,8 @@ _h_: backward slurp/forward barf
   "mj" 'cider-jack-in
   "ml" 'cider-eval-last-sexp
   "mm" 'cider-macroexpand-1
-  "mp" 'cider-pprint-eval-last-sexp)
+  "mp" 'cider-pprint-eval-last-sexp
+  "mr" 'cider-refresh)
 
 (evil-leader/set-key-for-mode
   'clojurescript-mode
@@ -130,6 +131,7 @@ _h_: backward slurp/forward barf
   "ml" 'cider-eval-last-sexp
   "mm" 'cider-macroexpand-1
   "mp" 'cider-pprint-eval-last-sexp
+  "mr" 'cider-refresh
   "mtd" 'test-doo
   "mtw" 'test-doo-watch)
 
