@@ -117,9 +117,11 @@ _h_: backward slurp/forward barf
   'clojure-mode
   "mb" 'cider-load-buffer
   "md" 'cider-apropos-documentation
+  "mf" 'cider-load-file
   "mj" 'cider-jack-in
   "ml" 'cider-eval-last-sexp
   "mm" 'cider-macroexpand-1
+  "mn" 'cider-repl-set-ns
   "mp" 'cider-pprint-eval-last-sexp
   "mr" 'cider-refresh)
 
@@ -127,9 +129,11 @@ _h_: backward slurp/forward barf
   'clojurescript-mode
   "mb" 'cider-load-buffer
   "md" 'cider-apropos-documentation
+  "mf" 'cider-load-file
   "mj" 'cider-jack-in-clojurescript
   "ml" 'cider-eval-last-sexp
   "mm" 'cider-macroexpand-1
+  "mn" 'cider-repl-set-ns
   "mp" 'cider-pprint-eval-last-sexp
   "mr" 'cider-refresh
   "mtd" 'test-doo
