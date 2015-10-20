@@ -67,7 +67,9 @@ _h_: backward slurp/forward barf
   "0" 'select-window-0
   "a" 'projectile-ag
   "bb" 'helm-mini
+  "bc" 'kill-other-buffers
   "bk" 'kill-this-buffer
+  "bl" 'list-buffers
   "c" 'comment-or-uncomment-region
   "dc" 'dired-jump
   "dd" 'ido-dired
