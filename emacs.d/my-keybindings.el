@@ -125,7 +125,10 @@ _h_: backward slurp/forward barf
   "mm" 'cider-macroexpand-1
   "mn" 'cider-repl-set-ns
   "mp" 'cider-pprint-eval-last-sexp
-  "mr" 'cider-refresh)
+  "mr" 'cider-refresh
+  "mtp" 'cider-test-run-test
+  "mta" 'cider-test-run-tests
+  "mtr" 'cider-test-rerun-tests)
 
 (evil-leader/set-key-for-mode
   'clojurescript-mode
