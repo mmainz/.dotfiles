@@ -118,6 +118,14 @@
             (lambda ()
               (setq compilation-read-command nil))))
 
+(use-package clj-refactor
+  :config
+  (defun clj-refactor-clojure-mode-hook ()
+    (clj-refactor-mode 1)
+    (yas-minor-mode 1))
+
+  (add-hook 'clojure-mode-hook #'clj-refactor-clojure-mode-hook))
+
 (use-package web-mode
   :config
   (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))

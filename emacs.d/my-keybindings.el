@@ -124,8 +124,11 @@ _h_: backward slurp/forward barf
   "ml" 'cider-eval-last-sexp
   "mm" 'cider-macroexpand-1
   "mn" 'cider-repl-set-ns
+  "mN" 'hydra-cljr-ns-menu/body
   "mp" 'cider-pprint-eval-last-sexp
+  "mP" 'hydra-cljr-project-menu/body
   "mr" 'cider-refresh
+  "mR" 'hydra-cljr-code-menu/body
   "mtp" 'cider-test-run-test
   "mta" 'cider-test-run-tests
   "mtr" 'cider-test-rerun-tests)

@@ -38,6 +38,7 @@
                             highlight-symbol
                             rainbow-mode
                             clojure-mode
+                            clj-refactor
                             web-mode
                             coffee-mode
                             slim-mode
