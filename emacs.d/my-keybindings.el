@@ -81,7 +81,7 @@ _h_: backward slurp/forward barf
   "i" 'indent-region-or-buffer
   "j" 'avy-goto-char
   "k" 'hydra-smartparens/body
-  "pf" 'helm-projectile-find-file
+  "pf" 'helm-browse-project
   "pp" 'helm-projectile-switch-project
   "r" 'iedit-mode
   "s" 'save-buffer

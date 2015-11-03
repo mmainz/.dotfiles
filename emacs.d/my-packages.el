@@ -17,6 +17,7 @@
                             flx-ido
                             helm-flx
                             helm
+                            helm-ls-git
                             company
                             ag
                             projectile
