@@ -99,7 +99,7 @@
   (setq guide-key/popup-window-position 'bottom)
   (guide-key-mode 1))
 
-(use-package org-mode
+(use-package org
   :config
   (setq org-ellipsis "⤵"))
 
