@@ -99,6 +99,10 @@
   (setq guide-key/popup-window-position 'bottom)
   (guide-key-mode 1))
 
+(use-package org-mode
+  :config
+  (setq org-ellipsis "⤵"))
+
 (use-package rainbow-mode
   :config
   (defun activate-rainbow-mode () (rainbow-mode 1))
