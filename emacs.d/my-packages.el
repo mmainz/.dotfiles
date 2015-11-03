@@ -5,7 +5,8 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(defvar required-packages '(darcula-theme
+(defvar required-packages '(use-package
+                            darcula-theme
                             facemenu+
                             zoom-frm
                             eyedropper
