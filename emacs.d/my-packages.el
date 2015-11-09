@@ -26,11 +26,12 @@
                             ruby-end
                             iedit
                             hydra
-                            evil-leader
                             evil
+                            evil-leader
                             evil-surround
                             evil-matchit
                             evil-visualstar
+                            evil-magit
                             avy
                             ace-window
                             popwin
