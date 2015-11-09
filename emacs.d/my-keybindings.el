@@ -66,6 +66,7 @@ _h_: backward slurp/forward barf
   "9" 'select-window-9
   "0" 'select-window-0
   "a" 'projectile-ag
+  "A" 'ag
   "bb" 'helm-mini
   "bc" 'kill-other-buffers
   "bk" 'kill-this-buffer
@@ -155,6 +156,13 @@ _h_: backward slurp/forward barf
   "mtb" 'alchemist-mix-test-this-buffer
   "mtr" 'alchemist-mix-rerun-last-test
   "mtt" 'alchemist-mix-test-at-point)
+
+(evil-leader/set-key-for-mode
+  'ag-mode
+  "ma" 'wgrep-abort-changes
+  "me" 'wgrep-change-to-wgrep-mode
+  "mf" 'wgrep-finish-edit
+  "mx" 'wgrep-exit)
 
 ;; helm
 (global-set-key (kbd "M-x") 'helm-M-x)

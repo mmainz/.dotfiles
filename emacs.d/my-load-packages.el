@@ -43,6 +43,10 @@
 
 (use-package helm-ls-git)
 
+(use-package wgrep-ag
+  :config
+  (setq wgrep-auto-save-buffer t))
+
 (use-package company
   :config
   (global-company-mode)

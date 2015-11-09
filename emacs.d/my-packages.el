@@ -19,6 +19,7 @@
                             helm-flx
                             helm
                             helm-ls-git
+                            wgrep-ag
                             company
                             ag
                             projectile
