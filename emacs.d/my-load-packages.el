@@ -12,6 +12,10 @@
   (ocodo-svg-modelines-init)
   (smt/set-theme 'ocodo-mesh-aqua-smt))
 
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
+
 (use-package flx-ido
   :config
   (ido-mode 1)

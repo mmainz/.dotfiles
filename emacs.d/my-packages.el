@@ -12,6 +12,7 @@
                             eyedropper
                             paradox
                             ocodo-svg-modelines
+                            editorconfig
                             magit
                             git-timemachine
                             flx-ido
