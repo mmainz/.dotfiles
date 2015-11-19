@@ -32,25 +32,6 @@ _r_: replace symbol
   ("p" highlight-symbol-prev)
   ("r" highlight-symbol-query-replace))
 
-(defhydra hydra-smartparens (:hint nil)
-  "
-smartparens
------------
-_s_: split/splice
-_r_: raise
-_j_: join
-_l_: forward slurp/backward barf
-_h_: backward slurp/forward barf
-"
-  ("s" sp-split-sexp)
-  ("S" sp-splice-sexp)
-  ("r" sp-raise-sexp)
-  ("j" sp-join-sexp)
-  ("l" sp-forward-slurp-sexp)
-  ("L" sp-backward-barf-sexp)
-  ("h" sp-backward-slurp-sexp)
-  ("H" sp-forward-barf-sexp))
-
 ;; evil
 (define-key evil-motion-state-map "\t" nil)
 (evil-leader/set-leader "<SPC>")
@@ -81,7 +62,7 @@ _h_: backward slurp/forward barf
   "H" 'hydra-highlight/body
   "i" 'indent-region-or-buffer
   "j" 'avy-goto-char
-  "k" 'hydra-smartparens/body
+  "l" 'evil-lisp-state
   "pf" 'helm-browse-project
   "pp" 'helm-projectile-switch-project
   "r" 'iedit-mode

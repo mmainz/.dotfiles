@@ -34,6 +34,7 @@
                             evil-matchit
                             evil-visualstar
                             evil-magit
+                            evil-lisp-state
                             avy
                             ace-window
                             popwin

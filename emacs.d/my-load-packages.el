@@ -89,7 +89,8 @@
   (use-package evil-matchit
     :config
     (global-evil-matchit-mode 1))
-  (use-package evil-magit))
+  (use-package evil-magit)
+  (use-package evil-lisp-state))
 
 (use-package avy
   :config
