@@ -67,6 +67,7 @@
 
 (use-package smartparens-config
   :config
+  (smartparens-global-mode)
   (show-smartparens-global-mode))
 
 (use-package ruby-end
@@ -176,6 +177,17 @@
   (add-hook 'markdown-mode-hook
             (lambda ()
               (visual-line-mode))))
+
+(use-package elixir-mode
+  :config
+  (sp-with-modes '(elixir-mode)
+    (sp-local-pair "fn" "end"
+                   :when '(("SPC" "RET"))
+                   :actions '(insert navigate))
+    (sp-local-pair "do" "end"
+                   :when '(("SPC" "RET"))
+                   :post-handlers '(sp-ruby-def-post-handler)
+                   :actions '(insert navigate))))
 
 (use-package alchemist)
 
