@@ -100,6 +100,7 @@
   :config
   (push "*rspec-compilation*" popwin:special-display-config)
   (push "*cider-test-report*" popwin:special-display-config)
+  (push "*alchemist test report*" popwin:special-display-config)
   (popwin-mode 1))
 
 (use-package guide-key
