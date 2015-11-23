@@ -51,38 +51,10 @@ ZSH_THEME="sorin"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
-
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-else
-    export EDITOR='emacsclient -n'
-fi
-
-export GIT_EDITOR "emacsclient"
-
-
-export PATH="/usr/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-
-export GOPATH="$HOME/Development/go"
-export PATH="$GOPATH/bin:$PATH"
-
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
-
-export PATH="$HOME/.exenv/bin:$PATH"
-eval "$(exenv init -)"
-
-export PATH="$HOME/bin:$PATH"
-export PATH="./bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-source "$HOME/.nvm/nvm.sh"
-
-
 # export MANPATH="/usr/local/man:$MANPATH"
+
+eval "$(rbenv init -)"
+eval "$(exenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,13 +71,3 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-alias ec="emacsclient -n"
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-
-clone-ivx() {
-    git clone https://github.com/ivx/"$1".git
-}
-
-# load local config if available
-[[ -f ~/.local-env ]] && source ~/.local-env
