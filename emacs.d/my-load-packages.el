@@ -187,7 +187,9 @@
     (sp-local-pair "do" "end"
                    :when '(("SPC" "RET"))
                    :post-handlers '(sp-ruby-def-post-handler)
-                   :actions '(insert navigate))))
+                   :actions '(insert navigate))
+    (sp-local-pair "\"" nil
+                   :actions nil)))
 
 (use-package alchemist)
 
