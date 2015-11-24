@@ -214,8 +214,10 @@
 
 (use-package exec-path-from-shell
   :config
-  (setq exec-path-from-shell-arguments '("-l"))
-  (exec-path-from-shell-initialize))
+  (setq warning-minimum-level :emergency)
+  (setq exec-path-from-shell-arguments '("-i"))
+  (exec-path-from-shell-initialize)
+  (setq warning-minimum-level :warning))
 
 ;; external packages
 
