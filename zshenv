@@ -18,18 +18,15 @@ export PATH="/usr/local/bin:$PATH"
 export GOPATH="$HOME/Development/go"
 export PATH="$GOPATH/bin:$PATH"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.exenv/bin:$PATH"
-eval "$(exenv init -)"
-
 export PATH="$HOME/bin:$PATH"
 export PATH="./bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-source "$HOME/.nvm/nvm.sh"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$PATH"
+
+export PATH="$HOME/.exenv/bin:$PATH"
 
 alias ec="emacsclient -n"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
