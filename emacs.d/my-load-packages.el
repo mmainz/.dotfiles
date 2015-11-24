@@ -214,6 +214,7 @@
 
 (use-package exec-path-from-shell
   :config
+  (setq exec-path-from-shell-arguments '("-l"))
   (exec-path-from-shell-initialize))
 
 ;; external packages
