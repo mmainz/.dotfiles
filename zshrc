@@ -61,11 +61,6 @@ fi
 
 export GIT_EDITOR "emacsclient"
 
-
-export PATH="/usr/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
-export PATH="/usr/local/bin:$PATH"
-
 export GOPATH="$HOME/Development/go"
 export PATH="$GOPATH/bin:$PATH"
 
