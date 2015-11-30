@@ -51,6 +51,10 @@ _h_: backward slurp/forward barf
   ("h" sp-backward-slurp-sexp)
   ("H" sp-forward-barf-sexp))
 
+(defhydra hydra-winner (:hint nil)
+  "winner"
+  ("u" winner-undo "undo"))
+
 ;; evil
 (define-key evil-motion-state-map "\t" nil)
 (evil-leader/set-leader "<SPC>")
@@ -94,6 +98,7 @@ _h_: backward slurp/forward barf
   "wpc" 'popwin:close-popup-window
   "wpt" 'popwin:popup-buffer-tail
   "wps" 'popwin:stick-popup-window
+  "wu" 'hydra-winner/body
   "wv" 'split-window-right
   "w-" 'split-window-below
   "x" 'helm-M-x

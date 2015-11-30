@@ -86,9 +86,11 @@
 (add-hook 'compilation-mode-hook 'my-compilation-mode-hook)
 (add-hook 'rspec-compilation-mode-hook 'my-compilation-mode-hook)
 
-
 ;; maximize frame
 (toggle-frame-maximized)
+
+;; toggle winner mode
+(winner-mode)
 
 ;; start server for remote calling with emacsclient
 (server-start)
