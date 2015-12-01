@@ -73,9 +73,6 @@
 ;; remove trailing whitespace before saving a file
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-;; auto-pair parenthesis
-(electric-pair-mode)
-
 ;; set garbage collection threshold
 (setq gc-cons-threshold 10000000)
 
