@@ -51,6 +51,10 @@
                             go-mode
                             elixir-mode
                             alchemist
+                            f
+                            s
+                            let-alist
+                            elm-mode
                             undo-tree
                             cider
                             inf-ruby

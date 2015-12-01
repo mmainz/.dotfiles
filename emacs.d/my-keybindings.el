@@ -154,6 +154,16 @@ _h_: backward slurp/forward barf
   "mtw" 'test-doo-watch)
 
 (evil-leader/set-key-for-mode
+  'elm-mode
+  "mb" 'elm-preview-buffer
+  "md" 'elm-documentation-lookup
+  "mi" 'elm-import
+  "mrd" 'elm-repl-push-decl
+  "mrf" 'elm-repl-load
+  "mrr" 'elm-repl-push
+  "mv" 'elm-preview-main)
+
+(evil-leader/set-key-for-mode
   'elixir-mode
   "meb" 'alchemist-eval-print-buffer
   "mer" 'alchemist-eval-print-region

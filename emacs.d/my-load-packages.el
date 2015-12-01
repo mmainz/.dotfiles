@@ -193,6 +193,11 @@
 
 (use-package alchemist)
 
+(use-package f)
+(use-package s)
+(use-package let-alist)
+(use-package elm-mode)
+
 (use-package undo-tree
   :config
   (global-undo-tree-mode))
