@@ -99,8 +99,16 @@ alias ec="emacsclient -n"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias miex="iex -S mix"
 
+docker-rmi-untagged() {
+  docker rmi $(docker images | grep "^<none>" | awk '{ print $3 }')
+}
+
+docker-rm-stopped() {
+  docker rm $(docker ps -a -q)
+}
+
 clone-ivx() {
-    git clone git@github.com:ivx/"$1".git
+  git clone git@github.com:ivx/"$1".git
 }
 
 # load local config if available
