@@ -41,6 +41,9 @@
 (setq js-indent-level 2)
 (setq css-indent-offset 4)
 (setq sass-indent-offset 4)
+(add-hook 'sh-mode-hook (lambda ()
+                          (setq sh-basic-offset 2)
+                          (setq sh-indentation 2)))
 
 ;; 80 character limit highlight
 (require 'whitespace)
