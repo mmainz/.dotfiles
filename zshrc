@@ -100,7 +100,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias miex="iex -S mix"
 
 clone-ivx() {
-    git clone https://github.com/ivx/"$1".git
+    git clone git@github.com:ivx/"$1".git
 }
 
 # load local config if available
