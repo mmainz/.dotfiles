@@ -25,7 +25,6 @@
                             projectile
                             helm-projectile
                             smartparens
-                            ruby-end
                             iedit
                             hydra
                             evil

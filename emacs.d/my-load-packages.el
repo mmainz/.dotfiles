@@ -70,10 +70,6 @@
   (smartparens-global-mode)
   (show-smartparens-global-mode))
 
-(use-package ruby-end
-  :config
-  (setq ruby-end-insert-newline nil))
-
 (use-package evil
   :config
   (evil-mode 1)
