@@ -55,6 +55,9 @@
 (set-default 'truncate-lines t)
 (setq truncate-partial-width-windows nil)
 
+;; disable electric pair globally
+(electric-indent-mode -1)
+
 ;; reload files that were changed externally
 (global-auto-revert-mode t)
 
