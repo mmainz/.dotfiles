@@ -177,13 +177,14 @@
 (use-package elixir-mode
   :config
   (sp-with-modes '(elixir-mode)
-    (sp-local-pair "fn" "end"
-                   :when '(("SPC" "RET"))
-                   :actions '(insert navigate))
+    (sp-local-pair "->" "end"
+                   :when '(("RET"))
+                   :post-handlers '(elixir-do-end-close-action)
+                   :actions '(insert))
     (sp-local-pair "do" "end"
                    :when '(("SPC" "RET"))
-                   :post-handlers '(sp-ruby-def-post-handler)
-                   :actions '(insert navigate))))
+                   :post-handlers '(elixir-do-end-close-action)
+                   :actions '(insert))))
 
 (use-package alchemist)
 
