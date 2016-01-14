@@ -56,7 +56,7 @@
 (setq truncate-partial-width-windows nil)
 
 ;; disable electric pair globally
-(electric-pair-mode -1)
+(electric-pair-mode 1)
 
 ;; reload files that were changed externally
 (global-auto-revert-mode t)

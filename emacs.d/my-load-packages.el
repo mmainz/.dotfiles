@@ -67,6 +67,8 @@
 
 (use-package smartparens-config
   :config
+  (sp-pair "'" nil :actions :rem)
+  (sp-pair "\"" nil :actions :rem)
   (smartparens-global-mode)
   (show-smartparens-global-mode))
 
