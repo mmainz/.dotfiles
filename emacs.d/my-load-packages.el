@@ -7,6 +7,10 @@
 
 (use-package zoom-frm)
 
+(use-package super-save
+  :config
+  (super-save-mode +1))
+
 (use-package ocodo-svg-modelines
   :config
   (ocodo-svg-modelines-init)

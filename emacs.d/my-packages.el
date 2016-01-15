@@ -11,6 +11,7 @@
                             zoom-frm
                             eyedropper
                             paradox
+                            super-save
                             ocodo-svg-modelines
                             editorconfig
                             magit
