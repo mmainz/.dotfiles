@@ -47,7 +47,7 @@
 
 ;; 80 character limit highlight
 (require 'whitespace)
-(setq whitespace-line-column 80)
+(setq whitespace-line-column 81)
 (setq whitespace-style '(face lines-tail))
 (add-hook 'prog-mode-hook 'whitespace-mode)
 
