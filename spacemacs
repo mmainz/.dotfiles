@@ -254,6 +254,10 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+  (add-hook 'clojure-mode-hook (lambda ()
+                                 (setq-local helm-dash-docsets '("Clojure"))))
+  (add-hook 'clojurescript-mode-hook (lambda ()
+                                       (setq-local helm-dash-docsets '("Clojure"))))
   (add-hook 'elixir-mode-hook (lambda ()
                                 (setq-local helm-dash-docsets '("Elixir"))))
   (add-hook 'ruby-mode-hook (lambda ()
