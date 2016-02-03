@@ -252,22 +252,25 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
-  (add-hook 'clojure-mode-hook (lambda ()
-                                 (setq-local helm-dash-docsets '("Clojure"))))
-  (add-hook 'clojurescript-mode-hook (lambda ()
-                                       (setq-local helm-dash-docsets '("Clojure"))))
-  (add-hook 'elixir-mode-hook (lambda ()
-                                (setq-local helm-dash-docsets '("Elixir"))))
-  (add-hook 'ruby-mode-hook (lambda ()
-                              (setq-local helm-dash-docsets '("Ruby_2"))))
-
-  (setq company-idle-delay 0.1)
   )
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (add-hook 'clojure-mode-hook (lambda ()
+                                 (setq-local helm-dash-docsets '("Clojure"))))
+  (add-hook 'clojurescript-mode-hook (lambda ()
+                                       (setq-local helm-dash-docsets
+                                                   '("Clojure"))))
+  (add-hook 'elixir-mode-hook (lambda ()
+                                (setq-local helm-dash-docsets '("Elixir"))))
+  (add-hook 'ruby-mode-hook (lambda ()
+                              (setq-local helm-dash-docsets '("Ruby_2"))))
+
+  (setq company-idle-delay 0.1)
+
+  (add-hook 'after-change-major-mode-hook 'fci-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
