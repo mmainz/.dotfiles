@@ -13,3 +13,6 @@
 [submodule "ruby-build"]
 	path = ruby-build
 	url = https://github.com/sstephenson/ruby-build.git
+[submodule "elixir-build"]
+	path = elixir-build
+	url = https://github.com/mururu/elixir-build.git
