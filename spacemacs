@@ -44,7 +44,8 @@ values."
      ruby
      rust
      shell-scripts
-     spell-checking
+     (spell-checking :variables
+                     spell-checking-enable-by-default nil)
      sql
      syntax-checking
      version-control
