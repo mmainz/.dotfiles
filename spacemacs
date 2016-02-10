@@ -274,6 +274,9 @@ layers configuration. You are free to put any user code."
 
   (setq fci-rule-color "dim gray")
   (add-hook 'after-change-major-mode-hook 'fci-mode)
+
+  (global-aggressive-indent-mode 1)
+  (add-to-list 'aggressive-indent-excluded-modes 'elixir-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
