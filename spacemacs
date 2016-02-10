@@ -31,7 +31,6 @@ values."
      elm
      emacs-lisp
      erlang
-     eyebrowse
      git
      go
      html
