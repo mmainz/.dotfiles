@@ -277,6 +277,8 @@ layers configuration. You are free to put any user code."
 
   (global-aggressive-indent-mode 1)
   (add-to-list 'aggressive-indent-excluded-modes 'elixir-mode)
+
+  (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
