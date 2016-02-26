@@ -6,15 +6,26 @@ declare -a dotfiles=("bundle"
                      "irbrc"
                      "lein"
                      "nvm"
-                     "oh-my-zsh"
                      "rbenv"
                      "ruby-build"
-                     "spacemacs"
-                     "zshrc")
+                     "spacemacs")
 
 mkdir -p ~/.config
 for dotfile in "${dotfiles[@]}"
 do
     eval "rm ~/.$dotfile"
     eval "ln -s ~/.dotfiles/$dotfile ~/.$dotfile"
+done
+
+declare -a preztofiles=("zlogin"
+                        "zlogout"
+                        "zpreztorc"
+                        "zprofile"
+                        "zshenv"
+                        "zshrc")
+
+for file in "${preztofiles[@]}"
+do
+    eval "rm ~/.$file"
+    eval "ln -s ~/.dotfiles/zprezto/runcoms/$file ~/.$file"
 done

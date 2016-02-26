@@ -1,9 +1,6 @@
 [submodule "nvm"]
 	path = nvm
 	url = https://github.com/creationix/nvm.git
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "exenv"]
 	path = exenv
 	url = https://github.com/mururu/exenv.git
@@ -16,3 +13,6 @@
 [submodule "elixir-build"]
 	path = elixir-build
 	url = https://github.com/mururu/elixir-build.git
+[submodule "zprezto"]
+	path = zprezto
+	url = git@github.com:mmainz/prezto.git
