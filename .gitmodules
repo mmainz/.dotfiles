@@ -16,3 +16,4 @@
 [submodule "zprezto"]
 	path = zprezto
 	url = git@github.com:mmainz/prezto.git
+	branch = master
