@@ -29,3 +29,5 @@ do
     eval "rm ~/.$file"
     eval "ln -s ~/.dotfiles/zprezto/runcoms/$file ~/.$file"
 done
+
+ln -s ~/.dotfiles/zprezto ~/.zprezto
