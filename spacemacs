@@ -289,6 +289,7 @@ layers configuration. You are free to put any user code."
                              (setq web-mode-code-indent-offset 2)
                              (setq web-mode-sql-indent-offset 2)))
 
+  (setq compilation-scroll-output t)
   (require 'ansi-color)
   (add-hook 'compilation-filter-hook (lambda ()
                                        (toggle-read-only)
