@@ -288,7 +288,13 @@ layers configuration. You are free to put any user code."
                              (setq web-mode-css-indent-offset 2)
                              (setq web-mode-code-indent-offset 2)
                              (setq web-mode-sql-indent-offset 2)))
-  )
+
+  (require 'ansi-color)
+  (add-hook 'compilation-filter-hook (lambda ()
+                                       (toggle-read-only)
+                                       (ansi-color-apply-on-region
+                                        compilation-filter-start (point))
+                                       (toggle-read-only))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
