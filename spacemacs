@@ -283,6 +283,7 @@ layers configuration. You are free to put any user code."
   (setq standard-indent 2)
   (setq json-reformat:indent-width 2)
   (setq js-indent-level 2)
+  (setq css-indent-offset 2)
   (add-hook 'web-mode-hook (lambda ()
                              (setq web-mode-markup-indent-offset 2)
                              (setq web-mode-css-indent-offset 2)
