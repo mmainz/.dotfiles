@@ -273,7 +273,8 @@ layers configuration. You are free to put any user code."
   (setq company-idle-delay 0.1)
 
   (setq fci-rule-color "dim gray")
-  (add-hook 'after-change-major-mode-hook 'fci-mode)
+  (add-hook 'after-change-major-mode-hook (lambda ()
+                                            (turn-on-fci-mode)))
 
   (global-aggressive-indent-mode 1)
   (add-to-list 'aggressive-indent-excluded-modes 'elixir-mode)
