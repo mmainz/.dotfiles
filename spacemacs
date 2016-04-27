@@ -278,6 +278,7 @@ layers configuration. You are free to put any user code."
 
   (global-aggressive-indent-mode 1)
   (add-to-list 'aggressive-indent-excluded-modes 'elixir-mode)
+  (add-to-list 'aggressive-indent-excluded-modes 'ruby-mode)
 
   (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
 
