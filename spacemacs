@@ -40,6 +40,7 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
+     react
      ruby
      rust
      shell-scripts
@@ -276,16 +277,24 @@ layers configuration. You are free to put any user code."
   (add-hook 'after-change-major-mode-hook (lambda ()
                                             (turn-on-fci-mode)))
 
-  (global-aggressive-indent-mode 1)
-  (add-to-list 'aggressive-indent-excluded-modes 'elixir-mode)
-  (add-to-list 'aggressive-indent-excluded-modes 'ruby-mode)
 
   (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
 
-  (setq standard-indent 2)
-  (setq json-reformat:indent-width 2)
-  (setq js-indent-level 2)
-  (setq css-indent-offset 2)
+  (setq-default standard-indent 2
+                json-reformat:indent-width 2
+                js-indent-level 2
+                js2-basic-offset 2
+                css-indent-offset 2
+                web-mode-markup-indent-offset 2
+                web-mode-css-indent-offset 2
+                web-mode-code-indent-offset 2
+                web-mode-attr-indent-offset 2)
+
+  (with-eval-after-load 'web-mode
+    (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
+    (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
+
   (add-hook 'web-mode-hook (lambda ()
                              (setq web-mode-markup-indent-offset 2)
                              (setq web-mode-css-indent-offset 2)
