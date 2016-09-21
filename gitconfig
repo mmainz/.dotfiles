@@ -12,3 +12,4 @@
 	default = simple
 [core]
 	editor = vi
+	excludesfile = /Users/mmainz/.gitignore
