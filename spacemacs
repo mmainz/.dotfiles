@@ -56,7 +56,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(ag dockerfile-mode)
+   dotspacemacs-additional-packages '(ag dockerfile-mode flycheck-credo)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -261,6 +261,9 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq create-lockfiles nil)
+
+  (eval-after-load 'flycheck
+    '(flycheck-credo-setup))
 
   (add-hook 'clojure-mode-hook (lambda ()
                                  (setq-local helm-dash-docsets '("Clojure"))))
