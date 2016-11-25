@@ -36,6 +36,7 @@ values."
      html
      javascript
      markdown
+     nginx
      org
      (shell :variables
             shell-default-height 30
