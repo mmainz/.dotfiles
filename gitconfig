@@ -13,3 +13,5 @@
 [core]
 	editor = vi
 	excludesfile = /Users/mmainz/.gitignore
+[rebase]
+	autosquash = true
