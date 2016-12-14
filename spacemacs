@@ -262,6 +262,11 @@ This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq create-lockfiles nil)
 
+  (with-eval-after-load 'org
+    (setq org-default-notes-file "~/Dropbox/org/notes.org")
+    (setq org-agenda-files (quote ("~/Dropbox/org")))
+    (setq org-refile-targets '((org-agenda-files . (:maxlevel . 6)))))
+
   (eval-after-load 'flycheck
     '(flycheck-credo-setup))
 
