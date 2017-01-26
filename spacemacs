@@ -288,6 +288,8 @@ layers configuration. You are free to put any user code."
   (add-hook 'cider-repl-mode-hook #'smartparens-strict-mode)
 
   (setq-default standard-indent 2
+                sh-indentation 2
+                sh-basic-offset 2
                 json-reformat:indent-width 2
                 js-indent-level 2
                 js2-basic-offset 2
