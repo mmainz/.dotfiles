@@ -34,7 +34,7 @@ values."
      markdown
      nginx
      org
-     (osx :variables osx-use-option-as-meta nil)
+     osx
      python
      react
      ruby
@@ -258,6 +258,7 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
+  (setq-default mac-right-option-modifier nil)
   (setq create-lockfiles nil)
 
   (with-eval-after-load 'org
