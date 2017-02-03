@@ -264,6 +264,8 @@ layers configuration. You are free to put any user code."
   (setq-default mac-right-option-modifier nil)
   (setq create-lockfiles nil)
 
+  (add-to-list 'auto-mode-alist '("\\Jenkinsfile\\'" . groovy-mode))
+
   (with-eval-after-load 'org
     (setq org-default-notes-file "~/Dropbox/org/notes.org")
     (setq org-agenda-files (quote ("~/Dropbox/org")))
