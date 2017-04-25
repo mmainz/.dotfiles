@@ -316,6 +316,8 @@ layers configuration. You are free to put any user code."
                              (setq web-mode-code-indent-offset 2)
                              (setq web-mode-sql-indent-offset 2)))
 
+  (setq flycheck-elixir-credo-strict t)
+
   (setq compilation-scroll-output t)
   (require 'ansi-color)
   (add-hook 'compilation-filter-hook (lambda ()
