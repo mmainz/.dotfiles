@@ -57,8 +57,7 @@ values."
    dotspacemacs-additional-packages '(ag
                                       dockerfile-mode
                                       flycheck-credo
-                                      groovy-mode
-                                      magithub)
+                                      groovy-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -265,10 +264,6 @@ layers configuration. You are free to put any user code."
   (setq-default mac-right-option-modifier nil)
   (setq create-lockfiles nil)
 
-  (use-package magithub
-    :after magit
-    :config (magithub-feature-autoinject t))
-
   (add-to-list 'auto-mode-alist '("\\Jenkinsfile\\'" . groovy-mode))
 
   (with-eval-after-load 'org
@@ -345,3 +340,23 @@ layers configuration. You are free to put any user code."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (winum string-inflection magithub groovy-mode reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode company-anaconda anaconda-mode pythonic alert log4e powerline pcre2el gntp org markdown-mode simple-httpd json-snatcher json-reformat parent-mode projectile request haml-mode gitignore-mode fringe-helper git-gutter+ git-gutter flyspell-correct pos-tip flycheck flx with-editor iedit anzu evil goto-chg undo-tree f diminish web-completion-data dash-functional tern go-mode inflections edn multiple-cursors paredit peg eval-sexp-fu highlight cider seq spinner queue clojure-mode rust-mode bind-key yasnippet packed company elixir-mode pkg-info epl s dash avy async auto-complete popup package-build csv-mode bind-map skewer-mode js2-mode magit-popup git-commit web-mode org-projectile htmlize helm-ag git-link ace-link smartparens helm helm-core magit hydra inf-ruby yaml-mode xterm-color ws-butler window-numbering which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toml-mode toc-org tagedit sql-indent spacemacs-theme spaceline smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe restart-emacs rbenv rake rainbow-delimiters racer quelpa pug-mode popwin persp-mode pcache paradox orgit org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file ob-elixir nginx-mode neotree multi-term move-text mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode linum-relative link-hint less-css-mode json-mode js2-refactor js-doc insert-shebang info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-dash helm-css-scss helm-company helm-c-yasnippet google-translate golden-ratio go-guru go-eldoc gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gh-md flyspell-correct-helm flycheck-rust flycheck-pos-tip flycheck-mix flycheck-elm flycheck-credo flx-ido fish-mode fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eshell-z eshell-prompt-extras esh-help erlang emmet-mode elm-mode elisp-slime-nav dumb-jump dockerfile-mode diff-hl define-word dash-at-point company-web company-tern company-statistics company-shell company-go column-enforce-mode coffee-mode clojure-snippets clj-refactor clean-aindent-mode cider-eval-sexp-fu chruby cargo bundler auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile alchemist aggressive-indent ag adaptive-wrap ace-window ace-jump-helm-line ac-ispell))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
