@@ -271,9 +271,6 @@ layers configuration. You are free to put any user code."
     (setq org-agenda-files (quote ("~/Dropbox/org")))
     (setq org-refile-targets '((org-agenda-files . (:maxlevel . 6)))))
 
-  (eval-after-load 'flycheck
-    '(flycheck-credo-setup))
-
   (add-hook 'clojure-mode-hook (lambda ()
                                  (setq-local helm-dash-docsets '("Clojure"))))
   (add-hook 'clojurescript-mode-hook (lambda ()
