@@ -38,6 +38,7 @@ values."
      osx
      python
      react
+     restclient
      ruby
      rust
      (shell :variables
