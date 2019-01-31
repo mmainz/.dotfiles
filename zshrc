@@ -19,6 +19,7 @@ compinit
 autoload -U promptinit; promptinit
 prompt spaceship
 export SPACESHIP_PROMPT_SEPARATE_LINE=false
+export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export SPACESHIP_PACKAGE_SHOW=false
 export SPACESHIP_DOCKER_SHOW=false
 export SPACESHIP_KUBECONTEXT_SHOW=false
