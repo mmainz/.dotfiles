@@ -37,7 +37,8 @@ values."
      yaml
      elixir
      javascript
-     (ruby :variables ruby-test-runner 'rspec)     html
+     (ruby :variables ruby-test-runner 'rspec)
+     html
      groovy
      typescript
      go
