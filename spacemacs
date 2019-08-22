@@ -324,7 +324,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (server-start)
 
-  (setq-default js2-basic-offset 2
+  (setq-default js-indent-level 2
+                js2-basic-offset 2
                 css-indent-offset 2
                 web-mode-markup-indent-offset 2
                 web-mode-css-indent-offset 2
