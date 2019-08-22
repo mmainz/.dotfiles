@@ -51,7 +51,6 @@ values."
      ;; better-defaults
      emacs-lisp
      git
-     github
      markdown
      restclient
      org
