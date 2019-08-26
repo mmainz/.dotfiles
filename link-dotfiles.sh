@@ -1,5 +1,4 @@
-declare -a dotfiles=("bundle"
-                     "config/git"
+declare -a dotfiles=("config/git"
                      "gemrc"
                      "gitconfig"
                      "irbrc"
