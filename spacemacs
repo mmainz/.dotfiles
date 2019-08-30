@@ -355,10 +355,8 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
-  (add-hook 'ruby-mode-hook (lambda ()
-                              (progn
-                                (lsp)
-                                (push 'company-lsp company-backends))))
+  (spacemacs|add-company-backends :backends company-lsp :modes ruby-mode)
+  (add-hook 'ruby-mode-hook #'lsp)
   (setq ruby-insert-encoding-magic-comment nil)
 
   (setq elixir-format-arguments
