@@ -41,7 +41,13 @@ values."
      html
      groovy
      typescript
-     go
+     (go :variables
+         go-backend 'lsp
+         godoc-at-point-function 'godoc-gogetdoc
+         go-format-before-save t
+         go-tab-width 2
+         go-use-test-args "-race -count=1"
+         gofmt-command "goimports")
      docker
      (lsp :variables
           lsp-ui-doc-enable nil
@@ -339,8 +345,6 @@ you should place your code here."
                 groovy-indent-offset 2
                 nginx-indent-level 2
                 sh-basic-offset 2)
-
-  (setq go-tab-width 2)
 
   (with-eval-after-load 'web-mode
     (add-to-list 'web-mode-indentation-params '("lineup-args" . nil))
