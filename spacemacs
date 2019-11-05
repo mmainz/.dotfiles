@@ -371,6 +371,8 @@ you should place your code here."
         (list "--dot-formatter" "~/.formatter.exs"))
   (add-hook 'elixir-mode-hook
             (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
+
+  (add-hook 'markdown-mode-hook #'prettier-js-mode)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
