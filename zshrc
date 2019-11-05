@@ -32,8 +32,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="./bin:$PATH"
 export PATH="${GOPATH//://bin:}/bin:$PATH"
 
-. ~/.nix-profile/etc/profile.d/nix.sh
-
 export GOPATH="$HOME/code/golang"
 
 clone-ivx() {
