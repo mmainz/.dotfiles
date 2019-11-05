@@ -359,15 +359,18 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
-  (spacemacs|add-company-backends :backends company-lsp :modes ruby-mode)
+  (spacemacs|add-company-backends :backends company-lsp
+                                  :modes ruby-mode)
+
   (add-hook 'ruby-mode-hook #'lsp)
+  (add-hook 'ruby-mode-hook #'prettier-js-mode)
+
   (setq ruby-insert-encoding-magic-comment nil)
 
   (setq elixir-format-arguments
         (list "--dot-formatter" "~/.formatter.exs"))
   (add-hook 'elixir-mode-hook
             (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
