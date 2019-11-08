@@ -352,9 +352,7 @@ you should place your code here."
     (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
   (add-hook 'js2-mode-hook 'prettier-js-mode)
-  (add-hook 'web-mode-hook 'prettier-js-mode)
   (add-hook 'js2-mode-hook 'flow-minor-enable-automatically)
-  (add-hook 'web-mode-hook 'flow-minor-enable-automatically)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
