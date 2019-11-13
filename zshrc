@@ -30,9 +30,9 @@ export SPACESHIP_KUBECONTEXT_SHOW=false
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="./bin:$PATH"
-export PATH="${GOPATH//://bin:}/bin:$PATH"
 
 export GOPATH="$HOME/code/golang"
+export PATH="$GOPATH/bin:$PATH"
 
 clone-ivx() {
   git clone git@github.com:ivx/"$1".git
