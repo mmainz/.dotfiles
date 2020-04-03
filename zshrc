@@ -32,7 +32,6 @@ export GOPATH="$HOME/code/golang"
 export PATH="$GOPATH/bin:$PATH"
 
 . $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
 
 clone-ivx() {
   git clone git@github.com:ivx/"$1".git
