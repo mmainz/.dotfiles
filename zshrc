@@ -37,6 +37,10 @@ clone-ivx() {
   git clone git@github.com:ivx/"$1".git
 }
 
+file-ts() {
+  date +"%Y%m%d%H%M%S"
+}
+
 case $TERM in
   xterm*)
     precmd () {print -Pn "\e]0;%~\a"}
