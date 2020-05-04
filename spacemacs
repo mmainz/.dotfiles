@@ -86,11 +86,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '((add-node-modules-to-path
-                                       :location (recipe :fetcher github
-                                                         :repo "joshuajaco/add-node-modules-to-path"
-                                                         :files ("*.el")
-                                                         :min-version "1"))
+   dotspacemacs-additional-packages '(add-node-modules-path
                                       prettier-js
                                       exec-path-from-shell)
    ;; A list of packages that cannot be updated.
@@ -369,18 +365,15 @@ you should place your code here."
 
   (eval-after-load 'js2-mode
     '(progn
-       (add-hook 'web-mode-hook #'add-node-modules-to-path)
+       (add-hook 'web-mode-hook #'add-node-modules-path)
        (add-hook 'web-mode-hook #'prettier-js-mode)))
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
-  (spacemacs|add-company-backends :backends company-lsp
-                                  :modes ruby-mode)
-
   (eval-after-load 'ruby-mode
     '(progn
-       (add-hook 'ruby-mode-hook #'add-node-modules-to-path)
+       (add-hook 'ruby-mode-hook #'add-node-modules-path)
        (add-hook 'ruby-mode-hook #'prettier-js-mode)))
 
   (setq ruby-insert-encoding-magic-comment nil)
