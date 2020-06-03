@@ -35,8 +35,8 @@ values."
      sql
      nginx
      yaml
+     dap
      (elixir :variables elixir-backend 'alchemist)
-     javascript
      (ruby :variables
            ruby-test-runner 'rspec
            ruby-backend 'lsp)
@@ -47,7 +47,11 @@ values."
              python-sort-imports-on-save t)
      html
      groovy
-     typescript
+     javascript
+     (typescript :variables
+                 typescript-backend 'lsp
+                 typescript-fmt-on-save t
+                 typescript-fmt-tool 'prettier)
      (go :variables
          go-backend 'lsp
          godoc-at-point-function 'godoc-gogetdoc
@@ -88,7 +92,8 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(add-node-modules-path
                                       prettier-js
-                                      exec-path-from-shell)
+                                      exec-path-from-shell
+                                      jest)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -363,10 +368,25 @@ you should place your code here."
     (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
     (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil)))
 
+  (package-install 'add-node-modules-path)
+  (require 'add-node-modules-path)
+
   (eval-after-load 'js2-mode
     '(progn
        (add-hook 'web-mode-hook #'add-node-modules-path)
        (add-hook 'web-mode-hook #'prettier-js-mode)))
+
+  (setq jest-executable "jest")
+  (spacemacs/declare-prefix-for-mode 'typescript-mode "t" "test")
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tt" 'jest-file)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "ta" 'jest)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tr" 'jest-repeat)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tp" 'jest-popup)
+  (spacemacs/declare-prefix-for-mode 'typescript-tsx-mode "t" "test")
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tt" 'jest-file)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "ta" 'jest)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tr" 'jest-repeat)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tp" 'jest-popup)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
