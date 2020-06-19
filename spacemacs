@@ -47,7 +47,6 @@ values."
              python-sort-imports-on-save t)
      html
      groovy
-     javascript
      (typescript :variables
                  typescript-backend 'lsp
                  typescript-fmt-on-save t
@@ -65,6 +64,7 @@ values."
           lsp-ui-doc-winum-ignore t
           lsp-ui-doc--buffer-prefix " *lsp-ui-doc-"
           lsp-ui-sideline-enable nil
+          lsp-clients-flow-server "i-should-not-exist"
           lsp-rust-server 'rust-analyzer)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
