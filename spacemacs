@@ -393,6 +393,11 @@ you should place your code here."
   (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tr" 'jest-repeat)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tp" 'jest-popup)
 
+  (eval-after-load 'ruby-mode
+    '(progn
+       (add-hook 'ruby-mode-hook #'add-node-modules-path)
+       (add-hook 'ruby-mode-hook #'prettier-js-mode)))
+
   (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
   (add-to-list 'auto-mode-alist '("Jenkinsfile" . groovy-mode))
 
