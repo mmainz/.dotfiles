@@ -350,6 +350,9 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+  (setq lsp-prefer-capf t)
+  (setq read-process-output-max (* 3072 1024))
+
   (when (memq window-system '(mac ns x))
     (exec-path-from-shell-initialize))
 
