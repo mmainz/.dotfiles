@@ -92,8 +92,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(add-node-modules-path
                                       prettier-js
-                                      exec-path-from-shell
-                                      jest)
+                                      exec-path-from-shell)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -381,17 +380,32 @@ you should place your code here."
        (add-hook 'web-mode-hook #'add-node-modules-path)
        (add-hook 'web-mode-hook #'prettier-js-mode)))
 
+  (princ (projectile-project-root))
   (setq jest-executable "jest")
+  (defun jest-test-region (start end)
+    (interactive "r")
+    (let ((default-directory (projectile-project-root)))
+      (compile (format "jest -t \"%s\" %s"
+                       (buffer-substring start end)
+                       (buffer-file-name)))))
+  (defun jest-test-file ()
+    (interactive)
+    (let ((default-directory (projectile-project-root)))
+      (compile (format "jest %s" (buffer-file-name)))))
+  (defun jest-test-project ()
+    (interactive)
+    (let ((default-directory (projectile-project-root)))
+      (compile "jest")))
   (spacemacs/declare-prefix-for-mode 'typescript-mode "t" "test")
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tt" 'jest-file)
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "ta" 'jest)
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tr" 'jest-repeat)
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tp" 'jest-popup)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tt" 'jest-test-region)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tb" 'jest-test-file)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "ta" 'jest-test-project)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tr" 'recompile)
   (spacemacs/declare-prefix-for-mode 'typescript-tsx-mode "t" "test")
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tt" 'jest-file)
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "ta" 'jest)
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tr" 'jest-repeat)
-  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tp" 'jest-popup)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tt" 'jest-test-region)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tb" 'jest-test-file)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "ta" 'jest-test-project)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tr" 'recompile)
 
   (eval-after-load 'ruby-mode
     '(progn
