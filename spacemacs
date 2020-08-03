@@ -50,7 +50,8 @@ values."
      (typescript :variables
                  typescript-backend 'lsp
                  typescript-fmt-on-save t
-                 typescript-fmt-tool 'prettier)
+                 typescript-fmt-tool 'prettier
+                 typescript-linter 'eslint)
      (go :variables
          go-backend 'lsp
          godoc-at-point-function 'godoc-gogetdoc
@@ -380,32 +381,50 @@ you should place your code here."
        (add-hook 'web-mode-hook #'add-node-modules-path)
        (add-hook 'web-mode-hook #'prettier-js-mode)))
 
-  (princ (projectile-project-root))
   (setq jest-executable "jest")
   (defun jest-test-region (start end)
     (interactive "r")
     (let ((default-directory (projectile-project-root)))
-      (compile (format "jest -t \"%s\" %s"
+      (compile (format "jest -t \"%s\" --runInBand %s"
                        (buffer-substring start end)
                        (buffer-file-name)))))
   (defun jest-test-file ()
     (interactive)
     (let ((default-directory (projectile-project-root)))
-      (compile (format "jest %s" (buffer-file-name)))))
+      (compile (format "jest --runInBand %s" (buffer-file-name)))))
   (defun jest-test-project ()
     (interactive)
     (let ((default-directory (projectile-project-root)))
-      (compile "jest")))
+      (compile "jest --maxWorkers=2")))
+  (defun eslint-file ()
+    (interactive)
+    (let ((default-directory (projectile-project-root)))
+      (compile (format "eslint %s" (buffer-file-name)))))
+  (defun eslint-project ()
+    (interactive)
+    (let ((default-directory (projectile-project-root)))
+      (compile (format "yarn eslint"))))
+  (defun eslint-fix-file ()
+    (interactive)
+    (let ((default-directory (projectile-project-root)))
+      (compile (format "eslint --fix %s" (buffer-file-name)))))
   (spacemacs/declare-prefix-for-mode 'typescript-mode "t" "test")
   (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tt" 'jest-test-region)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tb" 'jest-test-file)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "ta" 'jest-test-project)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "tr" 'recompile)
+  (spacemacs/declare-prefix-for-mode 'typescript-mode "e" "eslint")
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "eb" 'eslint-file)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-mode "ef" 'eslint-fix-file)
+
   (spacemacs/declare-prefix-for-mode 'typescript-tsx-mode "t" "test")
   (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tt" 'jest-test-region)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tb" 'jest-test-file)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "ta" 'jest-test-project)
   (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "tr" 'recompile)
+  (spacemacs/declare-prefix-for-mode 'typescript-tsx-mode "e" "eslint")
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "eb" 'eslint-file)
+  (spacemacs/set-leader-keys-for-major-mode 'typescript-tsx-mode "ef" 'eslint-fix-file)
 
   (eval-after-load 'ruby-mode
     '(progn
@@ -421,11 +440,6 @@ you should place your code here."
        (add-hook 'ruby-mode-hook #'prettier-js-mode)))
 
   (setq ruby-insert-encoding-magic-comment nil)
-
-  (setq elixir-format-arguments
-        (list "--dot-formatter" "~/.formatter.exs"))
-  (add-hook 'elixir-mode-hook
-            (lambda () (add-hook 'before-save-hook 'elixir-format nil t)))
 
   (add-hook 'markdown-mode-hook #'prettier-js-mode)
   )
