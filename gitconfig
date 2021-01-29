@@ -19,3 +19,7 @@
   insteadOf = "https://github.com/"
 [url "git@github.com:"]
 	insteadOf = "ssh://git@github.com/"
+[pull]
+	rebase = false
+[merge]
+	conflictstyle = diff3
