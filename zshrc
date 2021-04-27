@@ -1,7 +1,7 @@
 export LC_ALL=en_US.UTF-8
 
 alias ec="emacsclient -n"
-alias dc="docker-compose"
+alias dc="docker compose"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias kubep="kubectl --kubeconfig='$HOME/.kube/config.prod'"
 
@@ -39,6 +39,23 @@ clone-ivx() {
 
 file-ts() {
   date +"%Y%m%d%H%M%S"
+}
+
+maintain-ruby() {
+  yarn upgrade-interactive --latest
+  yarn format
+  bundle update
+  bundle exec rspec
+  bundle exec rubocop
+  bundle outdated --strict
+}
+
+maintain-elixir() {
+  mix deps.update --all
+  mix format
+  mix test
+  mix credo --strict
+  mix hex.outdated
 }
 
 case $TERM in
