@@ -3,7 +3,7 @@ export LC_ALL=en_US.UTF-8
 alias ec="emacsclient -n"
 alias dc="docker compose"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-alias kubep="kubectl --kubeconfig='$HOME/.kube/config.prod'"
+alias drilldoggo="open \"https://www.youtube.com/watch?v=6X-zKy70I1Y\""
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
