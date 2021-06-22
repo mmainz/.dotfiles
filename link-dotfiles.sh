@@ -2,7 +2,6 @@ declare -a dotfiles=("config/git"
                      "gemrc"
                      "gitconfig"
                      "irbrc"
-                     "spacemacs"
                      "zshrc")
 
 mkdir -p ~/.config

@@ -1,17 +1,16 @@
 export LC_ALL=en_US.UTF-8
 
-alias ec="emacsclient -n"
 alias dc="docker compose"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias drilldoggo="open \"https://www.youtube.com/watch?v=6X-zKy70I1Y\""
 
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='emacsclient -n'
-fi
+export EDITOR='vim'
+export GIT_EDITOR "vim"
 
-export GIT_EDITOR "emacsclient"
+. /opt/homebrew/opt/asdf/asdf.sh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+fpath=($fpath "/Users/mmainz/.zfunctions")
 
 autoload -Uz compinit
 compinit
@@ -30,8 +29,6 @@ export PATH="./bin:$PATH"
 
 export GOPATH="$HOME/code/golang"
 export PATH="$GOPATH/bin:$PATH"
-
-. $HOME/.asdf/asdf.sh
 
 clone-ivx() {
   git clone git@github.com:ivx/"$1".git
