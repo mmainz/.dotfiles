@@ -1,12 +1,13 @@
 export LC_ALL=en_US.UTF-8
+export EDITOR='vim'
+export GIT_EDITOR "vim"
+
+bindkey -e
 
 alias dc="docker compose"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias drilldoggo="open \"https://www.youtube.com/watch?v=6X-zKy70I1Y\""
 alias notes="(cd \"/Users/mmainz/Google Drive/My Drive/notes\"; code .)"
-
-export EDITOR='vim'
-export GIT_EDITOR "vim"
 
 . /opt/homebrew/opt/asdf/asdf.sh
 eval "$(/opt/homebrew/bin/brew shellenv)"
